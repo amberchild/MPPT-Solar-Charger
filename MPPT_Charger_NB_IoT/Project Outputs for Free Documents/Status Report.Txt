@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : PCB Document [MPPT_Charger.PcbDoc]
+   Generated File[MPPT_Charger.TXT]
+   Generated File[MPPT_Charger.LDP]
+   Generated File[MPPT_Charger.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 12:26:00 On 2020-04-01

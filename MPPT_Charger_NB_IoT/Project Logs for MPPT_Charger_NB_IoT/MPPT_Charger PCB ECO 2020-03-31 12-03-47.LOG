@@ -1,0 +1,16 @@
+Added Component: Designator=C38(C0805)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Link"; Value = "http://lt.farnell.com/kemet/c0805c105k5rac-tu/capacitor-1uf-50v-x7r-0805/dp/2118131RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part No."; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Description"; Value = "Ceramic Capacitor"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part No."; Value = "C0805C105K5RAC"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Spec."; Value = "50V, X7R"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Specification"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier part number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "4.7uF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=SR_N Pin=C38-1
+Added Pin To Net: NetName=GND Pin=C38-2
+Added Member To Class: ClassName=Charger Member=Component C38 Capacitor ceramic

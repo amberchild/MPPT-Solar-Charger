@@ -1,0 +1,71 @@
+Removed Parameter Part No.:Any from Part R27
+Removed Parameter Part No.:C0805C224K5RAC from Part C31
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C29
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C30
+Removed Parameter Part No.:ERJP14J2R0U from Part R28
+Removed Parameter Part No.:LQH88PN100M38L from Part L2
+Removed Parameter Part No.:MSB02001 from Part P9
+Removed Parameter Part No.:SK210 from Part D3
+Removed Parameter Part No.:TPS61165DRVT from Part U7
+Removed Parameter Spec.:0.5W, ±5% from Part R28
+Removed Parameter Spec.:0.125W, ±1% from Part R27
+Removed Parameter Spec.:1.2A, 38V from Part U7
+Removed Parameter Spec.:2pin, 5mm from Part P9
+Removed Parameter Spec.:3.15A, ± 20% from Part L2
+Removed Parameter Spec.:50V, X7R from Part C31
+Removed Parameter Spec.:50V, Y5V from Part C29
+Removed Parameter Spec.:50V, Y5V from Part C30
+Removed Parameter Spec.:100V,2A from Part D3
+Removed Parameter Vendor: from Part C29
+Removed Parameter Vendor: from Part C30
+Removed Parameter Vendor: from Part C31
+Removed Parameter Vendor: from Part D3
+Removed Parameter Vendor: from Part L2
+Removed Parameter Vendor: from Part P9
+Removed Parameter Vendor: from Part R27
+Removed Parameter Vendor: from Part R28
+Removed Parameter Vendor: from Part U7
+Change Value of Parameter Link in Part C29 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/murata-electronics/GRM219R6YA475KA73D/490-7208-1-ND/3900454
+Change Value of Parameter Manufacturer in Part C29 Old=TDK New=Murata Electronics
+Change Value of Parameter Manufacturer Part No. in Part C29 Old= New=GRM219R6YA475KA73D
+Change Value of Parameter Specification in Part C29 Old= New=X5R, 35V, 10%
+Change Value of Parameter Supplier in Part C29 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part C29 Old= New=490-7208-1-ND
+Change Value of Parameter Link in Part C30 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/murata-electronics/GRM219R6YA475KA73D/490-7208-1-ND/3900454
+Change Value of Parameter Manufacturer in Part C30 Old=TDK New=Murata Electronics
+Change Value of Parameter Manufacturer Part No. in Part C30 Old= New=GRM219R6YA475KA73D
+Change Value of Parameter Specification in Part C30 Old= New=X5R, 35V, 10%
+Change Value of Parameter Supplier in Part C30 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part C30 Old= New=490-7208-1-ND
+Change Value of Parameter Link in Part C31 Old=http://lt.farnell.com/kemet/c0805c224k5rac-auto/capacitor-0805-x7r-50v-220nf/dp/2070472RL New=https://www.digikey.com/product-detail/en/yageo/CC0402KRX5R8BB224/311-3341-1-ND/6818311
+Change Value of Parameter Manufacturer in Part C31 Old=KEMET New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part C31 Old= New=CC0402KRX5R8BB224
+Change Value of Parameter Specification in Part C31 Old= New=X5R, 25V, 10%      
+Change Value of Parameter Supplier in Part C31 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C31 Old= New=311-3341-1-ND
+Change Value of Parameter Link in Part L2 Old=http://lt.farnell.com/murata/lqh88pn100m38l/inductor-smd-8x8mm-10uh-20/dp/1782823 New=https://www.digikey.com/product-detail/en/murata-electronics/LQH3NPN100MMEL/490-15945-1-ND/6800610
+Change Value of Parameter Manufacturer in Part L2 Old=MURATA New=Murata Electronics
+Change Value of Parameter Manufacturer Part No. in Part L2 Old= New=LQH3NPN100MMEL
+Change Value of Parameter Part Description in Part L2 Old= New=Power Inductor
+Change Value of Parameter Specification in Part L2 Old= New=0.8A, 20%  
+Change Value of Parameter Supplier in Part L2 Old= New=DigiKey    
+Change Value of Parameter Supplier part number in Part L2 Old= New=490-15945-1-ND
+Change Value of Parameter Link in Part P9 Old=http://www.sauro.net/ New=https://www.sauro.net/products/MSG02001/?product_id=MSG02001
+Change Value of Parameter Manufacturer Part No. in Part P9 Old= New=MSG02001
+Change Value of Parameter Part Description in Part P9 Old= New=Terminal block
+Change Value of Parameter Specification in Part P9 Old= New=2pos. 5mm,  24A, 300V
+Change Value of Parameter Supplier in Part P9 Old= New=Rutronik
+Change Value of Parameter Supplier part number in Part P9 Old= New=COTERM5720
+Change Value of Parameter Value in Part P9 Old=MSB02001 New=MSG02001
+Change Value of Parameter Link in Part R27 Old= New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-076K8L/311-6-8KJRCT-ND/729444
+Change Value of Parameter Manufacturer in Part R27 Old=Any New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part R27 Old= New=RC0402JR-076K8L
+Change Value of Parameter Specification in Part R27 Old= New=5% 0,063W
+Change Value of Parameter Supplier in Part R27 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R27 Old= New=311-6.8KJRCT-ND
+Change Value of Parameter Link in Part R28 Old=http://lt.farnell.com/panasonic/erjp14j2r0u/resistors-surge-1210-2r-5-0-5w/dp/1894441 New=https://www.digikey.com/product-detail/en/panasonic-electronic-components/ERJ-8RQFR62V/P-62RCT-ND/3982353
+Change Value of Parameter Manufacturer in Part R28 Old=PANASONIC New=Panasonic Electronic Components
+Change Value of Parameter Manufacturer Part No. in Part R28 Old= New=ERJ-8RQFR62V
+Change Value of Parameter Specification in Part R28 Old= New=1% 0.25W
+Change Value of Parameter Supplier in Part R28 Old= New=DigiKey  
+Change Value of Parameter Supplier part number in Part R28 Old= New=P.62RCT-ND

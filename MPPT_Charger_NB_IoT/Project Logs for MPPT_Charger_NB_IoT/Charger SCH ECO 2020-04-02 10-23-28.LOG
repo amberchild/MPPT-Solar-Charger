@@ -1,0 +1,25 @@
+Change Value of Parameter Link in Part D1 Old=https://www.rutronik24.com/search-result/nojs:1337/qs:SMLVT3V3/reset:0 New=https://www.digikey.com/product-detail/en/stmicroelectronics/SM6T30CAY/497-10800-1-ND/2442951
+Change Value of Parameter Manufacturer Part No. in Part D1 Old=SMLVT3V3 New=SM6T30CAY
+Change Value of Parameter Part Description in Part D1 Old=Low voltage Transil™ New=TVS DIODE
+Change Value of Parameter Specification in Part D1 Old=3.3V, 0.6kW New=30V, 0.6kW
+Change Value of Parameter Supplier in Part D1 Old=Rutronik New=DigiKey  
+Change Value of Parameter Supplier part number in Part D1 Old=DTRL10899 New=497-10800-1-ND
+Change Value of Parameter Value in Part D1 Old=SMLVT3V3 New=SM6T30CAY  
+Change Value of Parameter Link in Part Q1 Old=https://www.rutronik24.com/search-result/qs:STL6P3LLH6/reset:0 New=https://uk.farnell.com/stmicroelectronics/stl150n3llh5/mosfet-n-ch-30v-35a-powerflat6x5/dp/1752112RL
+Change Value of Parameter Manufacturer Part No. in Part Q1 Old=STL6P3LLH6 New=STL150N3LLH5
+Change Value of Parameter Specification in Part Q1 Old=30V, 6A New=30V, 35A
+Change Value of Parameter Supplier in Part Q1 Old=Rutronik New=Farnell
+Change Value of Parameter Supplier part number in Part Q1 Old=STL6P3LLH6 New=1752112RL
+Change Value of Parameter Value in Part Q1 Old=STL6P3LLH6 New=STL150N3LLH5
+Change Value of Parameter Link in Part Q2 Old=https://www.rutronik24.com/search-result/qs:STL6P3LLH6/reset:0 New=https://uk.farnell.com/stmicroelectronics/stl150n3llh5/mosfet-n-ch-30v-35a-powerflat6x5/dp/1752112RL
+Change Value of Parameter Manufacturer Part No. in Part Q2 Old=STL6P3LLH6 New=STL150N3LLH5
+Change Value of Parameter Specification in Part Q2 Old=30V, 6A New=30V, 35A
+Change Value of Parameter Supplier in Part Q2 Old=Rutronik New=Farnell
+Change Value of Parameter Supplier part number in Part Q2 Old=STL6P3LLH6 New=1752112RL
+Change Value of Parameter Value in Part Q2 Old=STL6P3LLH6 New=STL150N3LLH5
+Change Value of Parameter Link in Part Q4 Old=https://www.rutronik24.com/search-result/qs:STL6P3LLH6/reset:0 New=https://uk.farnell.com/stmicroelectronics/stl150n3llh5/mosfet-n-ch-30v-35a-powerflat6x5/dp/1752112RL
+Change Value of Parameter Manufacturer Part No. in Part Q4 Old=STL6P3LLH6 New=STL150N3LLH5
+Change Value of Parameter Specification in Part Q4 Old=30V, 6A New=30V, 35A
+Change Value of Parameter Supplier in Part Q4 Old=Rutronik New=Farnell
+Change Value of Parameter Supplier part number in Part Q4 Old=STL6P3LLH6 New=1752112RL
+Change Value of Parameter Value in Part Q4 Old=STL6P3LLH6 New=STL150N3LLH5

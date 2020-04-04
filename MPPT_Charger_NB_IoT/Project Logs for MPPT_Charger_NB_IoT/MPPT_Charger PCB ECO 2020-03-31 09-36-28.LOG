@@ -1,0 +1,26 @@
+Removed Pin From Net: NetName=SWCLK Pin=P8-2
+Removed Pin From Net: NetName=SWDIO Pin=P8-3
+Added Component: Designator=U10(Micro_QFN_6L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Link"; Value = "https://www.rutronik24.com/product/st/usbulc6-2m6/3623499.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "STMicroelectronics"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part No."; Value = "USBULC6-2M6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Description"; Value = "Ultra large bandwidth ESD protection"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part No."; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Spec."; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Specification"; Value = "6V, 0.6pF"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = "Rutronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier part number"; Value = "DTRL11259"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "USBULC6-2M6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=SWCLK Pin=U10-1
+Added Pin To Net: NetName=GND Pin=U10-2
+Added Pin To Net: NetName=SWDIO Pin=U10-3
+Added Pin To Net: NetName=+3.3V Pin=U10-5
+Added Pin To Net: NetName=NetP8_2 Pin=P8-2
+Added Pin To Net: NetName=NetP8_2 Pin=U10-6
+Added Net: Name=NetP8_2
+Added Pin To Net: NetName=NetP8_3 Pin=P8-3
+Added Pin To Net: NetName=NetP8_3 Pin=U10-4
+Added Net: Name=NetP8_3
+Added Member To Class: ClassName=Controller Member=Component U10 USBULC6-2M6

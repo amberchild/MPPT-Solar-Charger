@@ -1,0 +1,20 @@
+Removed Pin From Net: NetName=NetC4_1 Pin=P6-4
+Change Component Comment : Designator=F1 Old Comment=7A, 63V New Comment=10A, 63V
+Added Component: Designator=F2(R2010)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Link"; Value = "http://www.farnell.com/datasheets/356523.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "MULTICOMP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part No."; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Description"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part No."; Value = "MC12CT 005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Spec."; Value = "5A, 63V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Specification"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier part number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "MC12CT 005"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC4_1 Pin=F2-1
+Added Pin To Net: NetName=NetF2_2 Pin=F2-2
+Added Pin To Net: NetName=NetF2_2 Pin=P6-4
+Added Net: Name=NetF2_2
+Added Member To Class: ClassName=Charger Member=Component F2 10A, 63V

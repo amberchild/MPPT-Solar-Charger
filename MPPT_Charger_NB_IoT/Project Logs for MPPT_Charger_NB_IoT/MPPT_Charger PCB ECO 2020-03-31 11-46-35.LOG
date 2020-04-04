@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=SR_N Pin=F2-1
+Removed Pin From Net: NetName=NetC30_1 Pin=F3-1
+Removed Member From Class: ClassName=Charger Member=F2
+Removed Member From Class: ClassName=LED Driver Member=F3
+Added Pin To Net: NetName=SR_N Pin=P6-1
+Added Pin To Net: NetName=NetC30_1 Pin=P9-1

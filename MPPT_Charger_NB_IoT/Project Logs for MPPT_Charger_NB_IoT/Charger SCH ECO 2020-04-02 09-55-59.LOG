@@ -1,0 +1,400 @@
+Removed Parameter LatestRevisionDate:17-Jul-2002 from Part P6
+Removed Parameter LatestRevisionNote:Re-released for DXP Platform. from Part P6
+Removed Parameter Part No.:12103D226KAT2A from Part C5
+Removed Parameter Part No.:12103D226KAT2A from Part C6
+Removed Parameter Part No.:12103D226KAT2A from Part C10
+Removed Parameter Part No.:12103D226KAT2A from Part C11
+Removed Parameter Part No.:Any from Part R2
+Removed Parameter Part No.:Any from Part R3
+Removed Parameter Part No.:Any from Part R4
+Removed Parameter Part No.:Any from Part R5
+Removed Parameter Part No.:Any from Part R8
+Removed Parameter Part No.:Any from Part R9
+Removed Parameter Part No.:Any from Part R10
+Removed Parameter Part No.:Any from Part R11
+Removed Parameter Part No.:Any from Part R12
+Removed Parameter Part No.:Any from Part R13
+Removed Parameter Part No.:Any from Part R14
+Removed Parameter Part No.:BQ24650RVAT from Part U4
+Removed Parameter Part No.:C0805C105K5RAC from Part C7
+Removed Parameter Part No.:C0805C105K5RAC from Part C8
+Removed Parameter Part No.:C0805C105K5RAC from Part C12
+Removed Parameter Part No.:C0805C105K5RAC from Part C38
+Removed Parameter Part No.:ERJL14KF20MU from Part R6
+Removed Parameter Part No.:ERJL14KF20MU from Part R7
+Removed Parameter Part No.: from Part D1
+Removed Parameter Part No.: from Part D2
+Removed Parameter Part No.: from Part Q1
+Removed Parameter Part No.: from Part Q2
+Removed Parameter Part No.: from Part Q3
+Removed Parameter Part No.: from Part Q4
+Removed Parameter Part No.: from Part TP1
+Removed Parameter Part No.: from Part TP6
+Removed Parameter Part No.: from Part TP7
+Removed Parameter Part No.: from Part U1
+Removed Parameter Part No.: from Part U2
+Removed Parameter Part No.: from Part U3
+Removed Parameter Part No.:LQH88PN100M38L from Part L1
+Removed Parameter Part No.:MC12CT 005 from Part F1
+Removed Parameter Part No.:MC12CT 005 from Part F2
+Removed Parameter Part No.:MCCA000322 from Part C16
+Removed Parameter Part No.:MCCA000386 from Part C2
+Removed Parameter Part No.:MCCA000386 from Part C3
+Removed Parameter Part No.:MCCA000386 from Part C4
+Removed Parameter Part No.:MCCA000386 from Part C9
+Removed Parameter Part No.:MCCA000386 from Part C13
+Removed Parameter Part No.:MCCA000386 from Part C14
+Removed Parameter Part No.:MCCA000386 from Part C15
+Removed Parameter Part No.:MSB02001 from Part P5
+Removed Parameter Part No.:T491D476K025AT from Part C17
+Removed Parameter Publisher:Altium Limited from Part P6
+Removed Parameter Spec.:0.33W, ±5% from Part R6
+Removed Parameter Spec.:0.33W, ±5% from Part R7
+Removed Parameter Spec.:0.125W, ±1% from Part R2
+Removed Parameter Spec.:0.125W, ±1% from Part R3
+Removed Parameter Spec.:0.125W, ±1% from Part R4
+Removed Parameter Spec.:0.125W, ±1% from Part R5
+Removed Parameter Spec.:0.125W, ±1% from Part R8
+Removed Parameter Spec.:0.125W, ±1% from Part R9
+Removed Parameter Spec.:0.125W, ±1% from Part R10
+Removed Parameter Spec.:0.125W, ±1% from Part R11
+Removed Parameter Spec.:0.125W, ±1% from Part R12
+Removed Parameter Spec.:0.125W, ±1% from Part R13
+Removed Parameter Spec.:0.125W, ±1% from Part R14
+Removed Parameter Spec.:2pin, 5mm from Part P5
+Removed Parameter Spec.:3.15A, ± 20% from Part L1
+Removed Parameter Spec.:5A, 63V from Part F1
+Removed Parameter Spec.:5A, 63V from Part F2
+Removed Parameter Spec.:25V, X5R from Part C5
+Removed Parameter Spec.:25V, X5R from Part C6
+Removed Parameter Spec.:25V, X5R from Part C10
+Removed Parameter Spec.:25V, X5R from Part C11
+Removed Parameter Spec.:25V,± 10% from Part C17
+Removed Parameter Spec.:26V, 10A from Part U4
+Removed Parameter Spec.:50V,NP0 from Part C16
+Removed Parameter Spec.:50V, X7R from Part C2
+Removed Parameter Spec.:50V, X7R from Part C3
+Removed Parameter Spec.:50V, X7R from Part C4
+Removed Parameter Spec.:50V, X7R from Part C7
+Removed Parameter Spec.:50V, X7R from Part C8
+Removed Parameter Spec.:50V, X7R from Part C9
+Removed Parameter Spec.:50V, X7R from Part C12
+Removed Parameter Spec.:50V, X7R from Part C13
+Removed Parameter Spec.:50V, X7R from Part C14
+Removed Parameter Spec.:50V, X7R from Part C15
+Removed Parameter Spec.:50V, X7R from Part C38
+Removed Parameter Spec.: from Part D1
+Removed Parameter Spec.: from Part D2
+Removed Parameter Spec.: from Part Q1
+Removed Parameter Spec.: from Part Q2
+Removed Parameter Spec.: from Part Q3
+Removed Parameter Spec.: from Part Q4
+Removed Parameter Spec.: from Part TP1
+Removed Parameter Spec.: from Part TP6
+Removed Parameter Spec.: from Part TP7
+Removed Parameter Spec.: from Part U1
+Removed Parameter Spec.: from Part U2
+Removed Parameter Spec.: from Part U3
+Removed Parameter Vendor: from Part C2
+Removed Parameter Vendor: from Part C3
+Removed Parameter Vendor: from Part C4
+Removed Parameter Vendor: from Part C5
+Removed Parameter Vendor: from Part C6
+Removed Parameter Vendor: from Part C7
+Removed Parameter Vendor: from Part C8
+Removed Parameter Vendor: from Part C9
+Removed Parameter Vendor: from Part C10
+Removed Parameter Vendor: from Part C11
+Removed Parameter Vendor: from Part C12
+Removed Parameter Vendor: from Part C13
+Removed Parameter Vendor: from Part C14
+Removed Parameter Vendor: from Part C15
+Removed Parameter Vendor: from Part C16
+Removed Parameter Vendor: from Part C17
+Removed Parameter Vendor: from Part C38
+Removed Parameter Vendor: from Part D1
+Removed Parameter Vendor: from Part D2
+Removed Parameter Vendor: from Part F1
+Removed Parameter Vendor: from Part F2
+Removed Parameter Vendor: from Part L1
+Removed Parameter Vendor: from Part P5
+Removed Parameter Vendor: from Part Q1
+Removed Parameter Vendor: from Part Q2
+Removed Parameter Vendor: from Part Q3
+Removed Parameter Vendor: from Part Q4
+Removed Parameter Vendor: from Part R2
+Removed Parameter Vendor: from Part R3
+Removed Parameter Vendor: from Part R4
+Removed Parameter Vendor: from Part R5
+Removed Parameter Vendor: from Part R6
+Removed Parameter Vendor: from Part R7
+Removed Parameter Vendor: from Part R8
+Removed Parameter Vendor: from Part R9
+Removed Parameter Vendor: from Part R10
+Removed Parameter Vendor: from Part R11
+Removed Parameter Vendor: from Part R12
+Removed Parameter Vendor: from Part R13
+Removed Parameter Vendor: from Part R14
+Removed Parameter Vendor: from Part TP1
+Removed Parameter Vendor: from Part TP6
+Removed Parameter Vendor: from Part TP7
+Removed Parameter Vendor: from Part U1
+Removed Parameter Vendor: from Part U2
+Removed Parameter Vendor: from Part U3
+Removed Parameter Vendor: from Part U4
+Change Value of Parameter Link in Part C2 Old=http://lt.farnell.com/avx/12103d226kat2a/capacitor-1210-x5r-25v-22uf/dp/1833829 New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C2 Old=AVX New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C2 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C2 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C2 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C2 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C3 Old=http://lt.farnell.com/avx/12103d226kat2a/capacitor-1210-x5r-25v-22uf/dp/1833829 New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C3 Old=AVX New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C3 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C3 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C3 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C3 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C4 Old=http://lt.farnell.com/avx/12103d226kat2a/capacitor-1210-x5r-25v-22uf/dp/1833829 New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C4 Old=AVX New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C4 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C4 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C4 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C4 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C5 Old=http://lt.farnell.com/avx/12103d226kat2a/capacitor-1210-x5r-25v-22uf/dp/1833829 New=https://www.digikey.com/product-detail/en/taiyo-yuden/GMK325BJ226MM-P/587-5853-1-ND/7674973
+Change Value of Parameter Manufacturer in Part C5 Old=AVX New=Taiyo Yuden
+Change Value of Parameter Manufacturer Part No. in Part C5 Old= New=GMK325BJ226MM-P
+Change Value of Parameter Specification in Part C5 Old= New=X5R, 35V, 20%  
+Change Value of Parameter Supplier in Part C5 Old= New=DigiKey  
+Change Value of Parameter Supplier part number in Part C5 Old= New=587-5853-1-ND
+Change Value of Parameter Link in Part C6 Old=http://lt.farnell.com/avx/12103d226kat2a/capacitor-1210-x5r-25v-22uf/dp/1833829 New=https://www.digikey.com/product-detail/en/taiyo-yuden/GMK325BJ226MM-P/587-5853-1-ND/7674973
+Change Value of Parameter Manufacturer in Part C6 Old=AVX New=Taiyo Yuden
+Change Value of Parameter Manufacturer Part No. in Part C6 Old= New=GMK325BJ226MM-P
+Change Value of Parameter Specification in Part C6 Old= New=X5R, 35V, 20%  
+Change Value of Parameter Supplier in Part C6 Old= New=DigiKey  
+Change Value of Parameter Supplier part number in Part C6 Old= New=587-5853-1-ND
+Change Value of Parameter Link in Part C7 Old=http://lt.farnell.com/kemet/c0805c105k5rac-tu/capacitor-1uf-50v-x7r-0805/dp/2118131RL New=https://www.digikey.com/product-detail/en/murata-electronics/GRM219R6YA475KA73D/490-7208-1-ND/3900454
+Change Value of Parameter Manufacturer in Part C7 Old=KEMET New=Murata Electronics
+Change Value of Parameter Manufacturer Part No. in Part C7 Old= New=GRM219R6YA475KA73D
+Change Value of Parameter Specification in Part C7 Old= New=X5R, 35V, 10%
+Change Value of Parameter Supplier in Part C7 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part C7 Old= New=490-7208-1-ND
+Change Value of Parameter Link in Part C8 Old=http://lt.farnell.com/kemet/c0805c105k5rac-tu/capacitor-1uf-50v-x7r-0805/dp/2118131RL New=https://www.digikey.com/product-detail/en/murata-electronics/GRM219R6YA475KA73D/490-7208-1-ND/3900454
+Change Value of Parameter Manufacturer in Part C8 Old=KEMET New=Murata Electronics
+Change Value of Parameter Manufacturer Part No. in Part C8 Old= New=GRM219R6YA475KA73D
+Change Value of Parameter Specification in Part C8 Old= New=X5R, 35V, 10%
+Change Value of Parameter Supplier in Part C8 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part C8 Old= New=490-7208-1-ND
+Change Value of Parameter Link in Part C9 Old=http://lt.farnell.com/avx/12103d226kat2a/capacitor-1210-x5r-25v-22uf/dp/1833829 New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C9 Old=AVX New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C9 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C9 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C9 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C9 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C10 Old=http://lt.farnell.com/avx/12103d226kat2a/capacitor-1210-x5r-25v-22uf/dp/1833829 New=https://www.digikey.com/product-detail/en/taiyo-yuden/GMK325BJ226MM-P/587-5853-1-ND/7674973
+Change Value of Parameter Manufacturer in Part C10 Old=AVX New=Taiyo Yuden
+Change Value of Parameter Manufacturer Part No. in Part C10 Old= New=GMK325BJ226MM-P
+Change Value of Parameter Specification in Part C10 Old= New=X5R, 35V, 20%  
+Change Value of Parameter Supplier in Part C10 Old= New=DigiKey  
+Change Value of Parameter Supplier part number in Part C10 Old= New=587-5853-1-ND
+Change Value of Parameter Link in Part C11 Old=http://lt.farnell.com/avx/12103d226kat2a/capacitor-1210-x5r-25v-22uf/dp/1833829 New=https://www.digikey.com/product-detail/en/taiyo-yuden/GMK325BJ226MM-P/587-5853-1-ND/7674973
+Change Value of Parameter Manufacturer in Part C11 Old=AVX New=Taiyo Yuden
+Change Value of Parameter Manufacturer Part No. in Part C11 Old= New=GMK325BJ226MM-P
+Change Value of Parameter Specification in Part C11 Old= New=X5R, 35V, 20%  
+Change Value of Parameter Supplier in Part C11 Old= New=DigiKey  
+Change Value of Parameter Supplier part number in Part C11 Old= New=587-5853-1-ND
+Change Value of Parameter Link in Part C12 Old=http://lt.farnell.com/kemet/c0805c105k5rac-tu/capacitor-1uf-50v-x7r-0805/dp/2118131RL New=https://www.digikey.com/product-detail/en/murata-electronics/GRM219R6YA475KA73D/490-7208-1-ND/3900454
+Change Value of Parameter Manufacturer in Part C12 Old=KEMET New=Murata Electronics
+Change Value of Parameter Manufacturer Part No. in Part C12 Old= New=GRM219R6YA475KA73D
+Change Value of Parameter Specification in Part C12 Old= New=X5R, 35V, 10%
+Change Value of Parameter Supplier in Part C12 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part C12 Old= New=490-7208-1-ND
+Change Value of Parameter Link in Part C13 Old=http://lt.farnell.com/multicomp/mcca000386/mlcc-0805-x7r-50v-100nf/dp/1759265RL New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C13 Old=MULTICOMP New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C13 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C13 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C13 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C13 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C14 Old=http://lt.farnell.com/multicomp/mcca000386/mlcc-0805-x7r-50v-100nf/dp/1759265RL New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C14 Old=MULTICOMP New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C14 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C14 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C14 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C14 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C15 Old=http://lt.farnell.com/avx/12103d226kat2a/capacitor-1210-x5r-25v-22uf/dp/1833829 New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C15 Old=AVX New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C15 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C15 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C15 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C15 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C16 Old=http://lt.farnell.com/multicomp/mcca000322/mlcc-0805-np0-50v-22pf/dp/1759195RL New=https://www.digikey.com/product-detail/en/yageo/CC0402JRNPO9BN220/311-1018-1-ND/302935
+Change Value of Parameter Manufacturer in Part C16 Old=MULTICOMP New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part C16 Old= New=CC0402JRNPO9BN220
+Change Value of Parameter Specification in Part C16 Old= New=NPO, 50V, 5%  
+Change Value of Parameter Supplier in Part C16 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part C16 Old= New=311-1018-1-ND
+Change Value of Parameter Link in Part C17 Old=http://lt.farnell.com/kemet/t491d476k025at/capacitor-case-d-47uf-25v/dp/1794744 New=https://www.digikey.com/product-detail/en/avx-corporation/TAJD476K016RNJ/478-1739-1-ND/564771
+Change Value of Parameter Manufacturer in Part C17 Old=KEMET New=AVX Corporation
+Change Value of Parameter Manufacturer Part No. in Part C17 Old= New=TAJD476K016RNJ
+Change Value of Parameter Specification in Part C17 Old= New=TANT, 16V, 10%
+Change Value of Parameter Supplier in Part C17 Old= New=DigiKey        
+Change Value of Parameter Supplier part number in Part C17 Old= New=478-1739-1-ND
+Change Value of Parameter Link in Part C38 Old=http://lt.farnell.com/kemet/c0805c105k5rac-tu/capacitor-1uf-50v-x7r-0805/dp/2118131RL New=https://www.digikey.com/product-detail/en/murata-electronics/GRM219R6YA475KA73D/490-7208-1-ND/3900454
+Change Value of Parameter Manufacturer in Part C38 Old=KEMET New=Murata Electronics
+Change Value of Parameter Manufacturer Part No. in Part C38 Old= New=GRM219R6YA475KA73D
+Change Value of Parameter Specification in Part C38 Old= New=X5R, 35V, 10%
+Change Value of Parameter Supplier in Part C38 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part C38 Old= New=490-7208-1-ND
+Change Value of Parameter Link in Part D2 Old=https://www.rutronik24.com/search-result/nojs:1337/qs:BAT54KFILM/reset:0 New=https://www.digikey.com/product-detail/en/stmicroelectronics/BAT54KFILM/497-5561-1-ND/1207053
+Change Value of Parameter Supplier in Part D2 Old=Rutronik New=DigiKey  
+Change Value of Parameter Supplier part number in Part D2 Old=DSKY5066 New=497-5561-1-ND
+Change Value of Parameter Link in Part F1 Old=http://www.farnell.com/datasheets/356523.pdf New=https://www.digikey.com/product-detail/en/yageo/AC2010JK-070RL/YAG4019CT-ND/6006868
+Change Value of Parameter Manufacturer in Part F1 Old=MULTICOMP New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part F1 Old= New=AC2010JK-070RL
+Change Value of Parameter Part Description in Part F1 Old= New=0 Ohms Jumper 
+Change Value of Parameter Specification in Part F1 Old= New=0.75W
+Change Value of Parameter Supplier in Part F1 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part F1 Old= New=YAG4019CT-ND
+Change Value of Parameter Value in Part F1 Old=MC12CT 005 New=AC2010JK-070RL
+Change Value of Parameter Link in Part F2 Old=http://www.farnell.com/datasheets/356523.pdf New=https://www.digikey.com/product-detail/en/yageo/AC2010JK-070RL/YAG4019CT-ND/6006868
+Change Value of Parameter Manufacturer in Part F2 Old=MULTICOMP New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part F2 Old= New=AC2010JK-070RL
+Change Value of Parameter Part Description in Part F2 Old= New=0 Ohms Jumper 
+Change Value of Parameter Specification in Part F2 Old= New=0.75W
+Change Value of Parameter Supplier in Part F2 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part F2 Old= New=YAG4019CT-ND
+Change Value of Parameter Value in Part F2 Old=MC12CT 005 New=AC2010JK-070RL
+Change Value of Parameter Link in Part L1 Old=http://lt.farnell.com/murata/lqh88pn100m38l/inductor-smd-8x8mm-10uh-20/dp/1782823 New=https://www.digikey.com/product-detail/en/sumida-america-components-inc/CDEP147NP-6R1MC-95/308-1608-1-ND/3232383
+Change Value of Parameter Manufacturer in Part L1 Old=MURATA New=Sumida America Components Inc.
+Change Value of Parameter Manufacturer Part No. in Part L1 Old= New=CDEP147NP-6R1MC-95
+Change Value of Parameter Part Description in Part L1 Old= New=Power Inductor
+Change Value of Parameter Specification in Part L1 Old= New=11A, 20%  
+Change Value of Parameter Supplier in Part L1 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part L1 Old= New=308-1608-1-ND
+Change Value of Parameter Link in Part P5 Old=http://www.sauro.net/ New=https://www.sauro.net/products/MSG02001/?product_id=MSG02001
+Change Value of Parameter Manufacturer Part No. in Part P5 Old= New=MSG02001
+Change Value of Parameter Part Description in Part P5 Old= New=Terminal block
+Change Value of Parameter Specification in Part P5 Old= New=2pos. 5mm,  24A, 300V
+Change Value of Parameter Supplier in Part P5 Old= New=Rutronik
+Change Value of Parameter Supplier part number in Part P5 Old= New=COTERM5720
+Change Value of Parameter Value in Part P5 Old=MSB02001 New=MSG02001
+Change Value of Parameter Link in Part Q3 Old=https://www.rutronik24.com/product/diodes+inc/dmg1012t-7/5168665.html New=https://www.digikey.com/product-detail/en/diodes-incorporated/DMG1012T-7/DMG1012T-7DICT-ND/2181232
+Change Value of Parameter Manufacturer in Part Q3 Old=Diodes Inc. New=Diodes Incorporated
+Change Value of Parameter Supplier in Part Q3 Old=Rutronik New=DigiKey  
+Change Value of Parameter Supplier part number in Part Q3 Old=TMOSS6623 New=DMG1012T-7DICT-ND
+Change Value of Parameter Link in Part R2 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0805JR-072RL/311-2-0ARCT-ND/731214
+Change Value of Parameter Manufacturer in Part R2 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R2 Old= New=RC0805JR-072RL
+Change Value of Parameter Specification in Part R2 Old= New=5% 0.125W
+Change Value of Parameter Supplier in Part R2 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R2 Old= New=311-2.0ARCT-ND
+Change Value of Parameter Link in Part R3 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0805JR-07510RL/311-510ARCT-ND/731290
+Change Value of Parameter Manufacturer in Part R3 Old=Any New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part R3 Old= New=RC0805JR-07510RL
+Change Value of Parameter Specification in Part R3 Old= New=5% 0.125W
+Change Value of Parameter Supplier in Part R3 Old= New=DigiKey  
+Change Value of Parameter Supplier part number in Part R3 Old= New=311-510ARCT-ND
+Change Value of Parameter Link in Part R4 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-07150KL/311-150KJRCT-ND/729372
+Change Value of Parameter Manufacturer in Part R4 Old=Any New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part R4 Old= New=RC0402JR-07150KL
+Change Value of Parameter Specification in Part R4 Old= New=5% 0,063W        
+Change Value of Parameter Supplier in Part R4 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part R4 Old= New=311-150KJRCT-ND
+Change Value of Parameter Link in Part R5 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363
+Change Value of Parameter Manufacturer in Part R5 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R5 Old= New=RC0402JR-07100KL
+Change Value of Parameter Specification in Part R5 Old= New=5% 0,063W    
+Change Value of Parameter Supplier in Part R5 Old= New=DigiKey          
+Change Value of Parameter Supplier part number in Part R5 Old= New=311-100KJRCT-ND
+Change Value of Parameter Link in Part R6 Old=http://lt.farnell.com/panasonic/erjl14kf20mu/resistor-1210-0r02-1-0-33w/dp/1577558RL New=https://www.digikey.com/product-detail/en/rohm-semiconductor/PMR50HZPFU8L00/RHM-008ASCT-ND/2094542
+Change Value of Parameter Manufacturer in Part R6 Old=PANASONIC New=Rohm Semiconductor
+Change Value of Parameter Manufacturer Part No. in Part R6 Old= New=PMR50HZPFU8L00
+Change Value of Parameter Specification in Part R6 Old= New=1% 1W
+Change Value of Parameter Supplier in Part R6 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R6 Old= New=RHM.008ASCT-ND
+Change Value of Parameter Link in Part R7 Old=http://lt.farnell.com/panasonic/erjl14kf20mu/resistor-1210-0r02-1-0-33w/dp/1577558RL New=https://www.digikey.com/product-detail/en/rohm-semiconductor/PMR50HZPFU8L00/RHM-008ASCT-ND/2094542
+Change Value of Parameter Manufacturer in Part R7 Old=PANASONIC New=Rohm Semiconductor
+Change Value of Parameter Manufacturer Part No. in Part R7 Old= New=PMR50HZPFU8L00
+Change Value of Parameter Specification in Part R7 Old= New=1% 1W
+Change Value of Parameter Supplier in Part R7 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R7 Old= New=RHM.008ASCT-ND
+Change Value of Parameter Link in Part R8 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-07560KL/311-560KJRCT-ND/729440
+Change Value of Parameter Manufacturer in Part R8 Old=Any New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part R8 Old= New=RC0402JR-07560KL
+Change Value of Parameter Specification in Part R8 Old= New=5% 0,063W        
+Change Value of Parameter Supplier in Part R8 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part R8 Old= New=311-560KJRCT-ND
+Change Value of Parameter Link in Part R9 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-0711KL/311-11KJRCT-ND/729367
+Change Value of Parameter Manufacturer in Part R9 Old=Any New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part R9 Old= New=RC0402JR-0711KL
+Change Value of Parameter Specification in Part R9 Old= New=5% 0,063W  
+Change Value of Parameter Supplier in Part R9 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R9 Old= New=311-11KJRCT-ND
+Change Value of Parameter Link in Part R10 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0100JR-0710KL/311-10KDHCT-ND/2254412
+Change Value of Parameter Manufacturer in Part R10 Old=Any New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part R10 Old= New=RC0100JR-0710KL
+Change Value of Parameter Specification in Part R10 Old= New=5% 0.03W
+Change Value of Parameter Supplier in Part R10 Old= New=DigiKey  
+Change Value of Parameter Supplier part number in Part R10 Old= New=311-10KDHCT-ND
+Change Value of Parameter Link in Part R11 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363
+Change Value of Parameter Manufacturer in Part R11 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R11 Old= New=RC0402JR-07100KL
+Change Value of Parameter Specification in Part R11 Old= New=5% 0,063W    
+Change Value of Parameter Supplier in Part R11 Old= New=DigiKey          
+Change Value of Parameter Supplier part number in Part R11 Old= New=311-100KJRCT-ND
+Change Value of Parameter Link in Part R12 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363
+Change Value of Parameter Manufacturer in Part R12 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R12 Old= New=RC0402JR-07100KL
+Change Value of Parameter Specification in Part R12 Old= New=5% 0,063W    
+Change Value of Parameter Supplier in Part R12 Old= New=DigiKey          
+Change Value of Parameter Supplier part number in Part R12 Old= New=311-100KJRCT-ND
+Change Value of Parameter Link in Part R13 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-07110KL/311-110KJRCT-ND/729366
+Change Value of Parameter Manufacturer in Part R13 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R13 Old= New=RC0402JR-07110KL
+Change Value of Parameter Specification in Part R13 Old= New=5% 0,063W      
+Change Value of Parameter Supplier in Part R13 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part R13 Old= New=311-110KJRCT-ND
+Change Value of Parameter Link in Part R14 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363
+Change Value of Parameter Manufacturer in Part R14 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R14 Old= New=RC0402JR-07100KL
+Change Value of Parameter Specification in Part R14 Old= New=5% 0,063W    
+Change Value of Parameter Supplier in Part R14 Old= New=DigiKey          
+Change Value of Parameter Supplier part number in Part R14 Old= New=311-100KJRCT-ND
+Change Value of Parameter Link in Part U1 Old= New=https://www.digikey.com/product-detail/en/on-semiconductor/NCS213RSQT2G/NCS213RSQT2GOSCT-ND/9169239
+Change Value of Parameter Manufacturer in Part U1 Old= New=ON Semiconductor
+Change Value of Parameter Manufacturer Part No. in Part U1 Old= New=NCS213RSQT2G
+Change Value of Parameter Part Description in Part U1 Old= New=Current-Shunt Monitor
+Change Value of Parameter Specification in Part U1 Old= New=x50, 80uA, 26V
+Change Value of Parameter Supplier in Part U1 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part U1 Old= New=NCS213RSQT2GOSCT-ND
+Change Value of Parameter Value in Part U1 Old= New=NCS213RSQT2G
+Change Value of Parameter Link in Part U2 Old= New=https://www.digikey.com/product-detail/en/on-semiconductor/NCS213RSQT2G/NCS213RSQT2GOSCT-ND/9169239
+Change Value of Parameter Manufacturer in Part U2 Old= New=ON Semiconductor
+Change Value of Parameter Manufacturer Part No. in Part U2 Old= New=NCS213RSQT2G
+Change Value of Parameter Part Description in Part U2 Old= New=Current-Shunt Monitor
+Change Value of Parameter Specification in Part U2 Old= New=x50, 80uA, 26V
+Change Value of Parameter Supplier in Part U2 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part U2 Old= New=NCS213RSQT2GOSCT-ND
+Change Value of Parameter Value in Part U2 Old= New=NCS213RSQT2G
+Change Value of Parameter Link in Part U3 Old= New=https://www.digikey.com/product-detail/en/texas-instruments/LM74610QDGKRQ1/296-43067-1-ND/5722225
+Change Value of Parameter Manufacturer in Part U3 Old= New=TI
+Change Value of Parameter Manufacturer Part No. in Part U3 Old= New=LM74610QDGKRQ1
+Change Value of Parameter Part Description in Part U3 Old= New=Smart Diode Controller
+Change Value of Parameter Specification in Part U3 Old= New=42V, 30uA
+Change Value of Parameter Supplier in Part U3 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part U3 Old= New=296-43067-1-ND
+Change Value of Parameter Value in Part U3 Old= New=LM74610QDGKRQ1
+Change Value of Parameter Link in Part U4 Old=http://lt.farnell.com/texas-instruments/bq24650rvat/ic-batt-charger-li-ion-10a-qfn/dp/2125812 New=https://www.digikey.com/product-detail/en/texas-instruments/BQ24650RVAR/296-46287-1-ND/7033462
+Change Value of Parameter Manufacturer in Part U4 Old=TEXAS INSTRUMENTS New=TI
+Change Value of Parameter Manufacturer Part No. in Part U4 Old= New=BQ24650RVAR
+Change Value of Parameter Part Description in Part U4 Old= New=Battery Charge Controller
+Change Value of Parameter Specification in Part U4 Old= New=28V, MPPT
+Change Value of Parameter Supplier in Part U4 Old= New=DigiKey  
+Change Value of Parameter Supplier part number in Part U4 Old= New=296-46287-1-ND
+Added Parameter Link=https://www.sauro.net/products/MSG04001/?product_id=MSG04001 to Part P6
+Added Parameter Manufacturer=SAURO to Part P6
+Added Parameter Manufacturer Part No.=MSG04001 to Part P6
+Added Parameter Part Description=Terminal block to Part P6
+Added Parameter Specification=4 pos. 5mm,  24A, 300V to Part P6
+Added Parameter Supplier=Rutronik to Part P6
+Added Parameter Supplier part number=COTERM6351 to Part P6
+Added Parameter Value=MSG04001 to Part P6

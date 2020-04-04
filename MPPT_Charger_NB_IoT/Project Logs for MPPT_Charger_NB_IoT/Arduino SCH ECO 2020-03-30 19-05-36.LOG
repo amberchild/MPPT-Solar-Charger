@@ -1,0 +1,6 @@
+Change Component Parameter Description in C1 Old=Capacitor New=Capacitor ceramic
+Change Value of Parameter Part Description in Part C1 Old= New=Ceramic Capacitor
+Change Value of Parameter Vendor in Part C1 Old=Farnell New=
+Change Component Parameter Comment in R1 Old= New=Resistor  
+Change Value of Parameter Part Description in Part R1 Old= New=Thick Film Resistor
+Change Value of Parameter Vendor in Part R1 Old=Any New=

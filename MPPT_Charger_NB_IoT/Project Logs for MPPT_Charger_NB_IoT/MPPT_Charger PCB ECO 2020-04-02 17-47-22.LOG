@@ -1,0 +1,13 @@
+Change Component Footprint: Designator=J1 Old Footprint=MCR-B-S-RA-TSMT-CS4A-T/R New Footprint=10118192-0001LF
+Change component parameters: Designator = "J1"; Footprint = "10118192-0001LF"; UniqueID = "\JIYIAFBH"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "Link"; Value = "https://www.digikey.com/product-detail/en/amphenol-icc-fci/10118192-0001LF/609-4613-1-ND/2785378"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Amphenol ICC (FCI)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part No."; Value = "10118192-0001LF"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Part Description"; Value = "Micro USB Connector"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Specification"; Value = "Type B"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier"; Value = "DigiKey"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier part number"; Value = "609-4613-1-ND"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Value"; Value = "10118192-0001LF"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC18_2 Pin=J1-10
+Added Pin To Net: NetName=NetC18_2 Pin=J1-11

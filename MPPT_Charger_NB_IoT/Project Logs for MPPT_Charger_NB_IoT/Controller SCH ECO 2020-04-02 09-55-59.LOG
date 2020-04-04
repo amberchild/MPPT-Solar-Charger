@@ -1,0 +1,245 @@
+Removed Parameter Part No.:Any from Part R15
+Removed Parameter Part No.:Any from Part R16
+Removed Parameter Part No.:Any from Part R18
+Removed Parameter Part No.:Any from Part R19
+Removed Parameter Part No.:Any from Part R20
+Removed Parameter Part No.:Any from Part R21
+Removed Parameter Part No.:Any from Part R22
+Removed Parameter Part No.:Any from Part R23
+Removed Parameter Part No.:Any from Part R24
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C21
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C22
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C23
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C24
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C25
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C26
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C28
+Removed Parameter Part No.: from Part C18
+Removed Parameter Part No.: from Part C19
+Removed Parameter Part No.: from Part C20
+Removed Parameter Part No.: from Part C27
+Removed Parameter Part No.: from Part J1
+Removed Parameter Part No.: from Part LED1
+Removed Parameter Part No.: from Part P8
+Removed Parameter Part No.: from Part R17
+Removed Parameter Part No.: from Part R25
+Removed Parameter Part No.: from Part R26
+Removed Parameter Part No.: from Part U5
+Removed Parameter Part No.: from Part U6
+Removed Parameter Part No.: from Part U10
+Removed Parameter Spec.:0.125W, ±1% from Part R15
+Removed Parameter Spec.:0.125W, ±1% from Part R16
+Removed Parameter Spec.:0.125W, ±1% from Part R18
+Removed Parameter Spec.:0.125W, ±1% from Part R19
+Removed Parameter Spec.:0.125W, ±1% from Part R20
+Removed Parameter Spec.:0.125W, ±1% from Part R21
+Removed Parameter Spec.:0.125W, ±1% from Part R22
+Removed Parameter Spec.:0.125W, ±1% from Part R23
+Removed Parameter Spec.:0.125W, ±1% from Part R24
+Removed Parameter Spec.:50V, Y5V from Part C21
+Removed Parameter Spec.:50V, Y5V from Part C22
+Removed Parameter Spec.:50V, Y5V from Part C23
+Removed Parameter Spec.:50V, Y5V from Part C24
+Removed Parameter Spec.:50V, Y5V from Part C25
+Removed Parameter Spec.:50V, Y5V from Part C26
+Removed Parameter Spec.:50V, Y5V from Part C28
+Removed Parameter Spec.: from Part C18
+Removed Parameter Spec.: from Part C19
+Removed Parameter Spec.: from Part C20
+Removed Parameter Spec.: from Part C27
+Removed Parameter Spec.: from Part J1
+Removed Parameter Spec.: from Part LED1
+Removed Parameter Spec.: from Part P8
+Removed Parameter Spec.: from Part R17
+Removed Parameter Spec.: from Part R25
+Removed Parameter Spec.: from Part R26
+Removed Parameter Spec.: from Part U5
+Removed Parameter Spec.: from Part U6
+Removed Parameter Spec.: from Part U10
+Removed Parameter Vendor: from Part C18
+Removed Parameter Vendor: from Part C19
+Removed Parameter Vendor: from Part C20
+Removed Parameter Vendor: from Part C21
+Removed Parameter Vendor: from Part C22
+Removed Parameter Vendor: from Part C23
+Removed Parameter Vendor: from Part C24
+Removed Parameter Vendor: from Part C25
+Removed Parameter Vendor: from Part C26
+Removed Parameter Vendor: from Part C27
+Removed Parameter Vendor: from Part C28
+Removed Parameter Vendor: from Part J1
+Removed Parameter Vendor: from Part LED1
+Removed Parameter Vendor: from Part P8
+Removed Parameter Vendor: from Part R15
+Removed Parameter Vendor: from Part R16
+Removed Parameter Vendor: from Part R17
+Removed Parameter Vendor: from Part R18
+Removed Parameter Vendor: from Part R19
+Removed Parameter Vendor: from Part R20
+Removed Parameter Vendor: from Part R21
+Removed Parameter Vendor: from Part R22
+Removed Parameter Vendor: from Part R23
+Removed Parameter Vendor: from Part R24
+Removed Parameter Vendor: from Part R25
+Removed Parameter Vendor: from Part R26
+Removed Parameter Vendor: from Part U5
+Removed Parameter Vendor: from Part U6
+Removed Parameter Vendor: from Part U10
+Change Value of Parameter Link in Part C18 Old=https://www.rutronik24.com/search-result/nojs:1337/qs:CC0402KRX7R9BB472/reset:0 New=https://www.digikey.com/product-detail/en/yageo/AC0402KRX7R9BB472/311-3030-1-ND/6643281
+Change Value of Parameter Manufacturer Part No. in Part C18 Old=CC0402KRX7R9BB472 New=AC0402KRX7R9BB472
+Change Value of Parameter Supplier in Part C18 Old=Rutronik New=DigiKey
+Change Value of Parameter Supplier part number in Part C18 Old=KKK17246 New=311-3030-1-ND
+Change Value of Parameter Link in Part C19 Old=https://www.rutronik24.com/search-result/nojs:1337/qs:CC0402JRNPO9BN330/reset:0 New=https://www.digikey.com/product-detail/en/yageo/CC0402JRNPO9BN330/311-1020-1-ND/302937
+Change Value of Parameter Supplier in Part C19 Old=Rutronik New=DigiKey      
+Change Value of Parameter Supplier part number in Part C19 Old=KKK14557 New=311-1020-1-ND
+Change Value of Parameter Link in Part C20 Old=https://www.rutronik24.com/product/samsung+em/cl05b104ko5nnnc/4748662.html New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C20 Old=Samsung EM New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C20 Old=CL05B104KO5NNNC New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C20 Old=X7R, 16V, 10% New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C20 Old=Rutronik New=DigiKey            
+Change Value of Parameter Supplier part number in Part C20 Old=KKK21419 New=445-6901-1-ND
+Change Value of Parameter Link in Part C21 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C21 Old=TDK New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C21 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C21 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C21 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C21 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C22 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C22 Old=TDK New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C22 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C22 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C22 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C22 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C23 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C23 Old=TDK New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C23 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C23 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C23 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C23 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C24 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C24 Old=TDK New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C24 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C24 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C24 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C24 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C25 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C25 Old=TDK New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C25 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C25 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C25 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C25 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C26 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C26 Old=TDK New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C26 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C26 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C26 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C26 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part C27 Old= New=https://www.digikey.com/product-detail/en/murata-electronics/GRM219R6YA475KA73D/490-7208-1-ND/3900454
+Change Value of Parameter Manufacturer in Part C27 Old= New=Murata Electronics
+Change Value of Parameter Manufacturer Part No. in Part C27 Old= New=GRM219R6YA475KA73D
+Change Value of Parameter Specification in Part C27 Old=NP0, 6.3V, 5% New=X5R, 35V, 10%
+Change Value of Parameter Supplier in Part C27 Old=Rutronik New=DigiKey
+Change Value of Parameter Supplier part number in Part C27 Old= New=490-7208-1-ND
+Change Value of Parameter Link in Part C28 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C28 Old=TDK New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C28 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C28 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C28 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C28 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part LED1 Old=https://www.rutronik24.com/search-result/nojs:1337/qs:LED24219/reset:0 New=https://www.digikey.com/product-detail/en/osram-opto-semiconductors-inc/LSG-T67K-JL-1-HK-1/475-3435-1-ND/7908051
+Change Value of Parameter Manufacturer in Part LED1 Old=OSRAM New=OSRAM Opto Semiconductors Inc.
+Change Value of Parameter Manufacturer Part No. in Part LED1 Old=LSGT67K-JL-1-0+HK-1-0-2-R18-Z New=LSG T67K-JL-1+HK-1
+Change Value of Parameter Supplier in Part LED1 Old=Rutronik New=DigiKey
+Change Value of Parameter Supplier part number in Part LED1 Old=LED24219 New=475-3435-1-ND
+Change Value of Parameter Value in Part LED1 Old=LSGT67K-JL-1-0+HK-1-0-2-R18-Z New=LSG T67K-JL-1+HK-1
+Change Value of Parameter Link in Part P8 Old= New=https://www.digikey.com/products/en?keywords=SLW-104-01-G-S
+Change Value of Parameter Manufacturer in Part P8 Old= New=Samtec Inc.
+Change Value of Parameter Manufacturer Part No. in Part P8 Old= New=SLW-104-01-G-S
+Change Value of Parameter Part Description in Part P8 Old= New=Receptacle Connector Through Hole
+Change Value of Parameter Specification in Part P8 Old= New=4 pos. 2.54mm
+Change Value of Parameter Supplier in Part P8 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part P8 Old= New=SAM1089-04-ND
+Change Value of Parameter Value in Part P8 Old= New=SLW-104-01-G-S
+Change Value of Parameter Link in Part R15 Old= New=https://www.digikey.com/product-detail/en/yageo/AC0402JR-071KL/YAG3525CT-ND/6006374
+Change Value of Parameter Manufacturer in Part R15 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R15 Old= New=AC0402JR-071KL 
+Change Value of Parameter Specification in Part R15 Old= New=5% 0,063W
+Change Value of Parameter Supplier in Part R15 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R15 Old= New=YAG3525CT-ND
+Change Value of Parameter Link in Part R16 Old= New=https://www.digikey.com/product-detail/en/yageo/AC0402JR-071KL/YAG3525CT-ND/6006374
+Change Value of Parameter Manufacturer in Part R16 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R16 Old= New=AC0402JR-071KL 
+Change Value of Parameter Specification in Part R16 Old= New=5% 0,063W
+Change Value of Parameter Supplier in Part R16 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R16 Old= New=YAG3525CT-ND
+Change Value of Parameter Link in Part R17 Old=https://www.rutronik24.com/search-result/nojs:1337/qs:RC0402JR-071ML/reset:0 New=https://www.digikey.com/product-detail/en/yageo/RC0402FR-071ML/311-1-00MLRCT-ND/729462
+Change Value of Parameter Manufacturer Part No. in Part R17 Old=RC0402JR-071ML New=RC0402FR-071ML
+Change Value of Parameter Specification in Part R17 Old=5% 0,063W New=1% 0,063W
+Change Value of Parameter Supplier in Part R17 Old=Rutronik New=DigiKey
+Change Value of Parameter Supplier part number in Part R17 Old=WRC33904 New=311-1.00MLRCT-ND
+Change Value of Parameter Link in Part R18 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363
+Change Value of Parameter Manufacturer in Part R18 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R18 Old= New=RC0402JR-07100KL
+Change Value of Parameter Specification in Part R18 Old= New=5% 0,063W    
+Change Value of Parameter Supplier in Part R18 Old= New=DigiKey          
+Change Value of Parameter Supplier part number in Part R18 Old= New=311-100KJRCT-ND
+Change Value of Parameter Link in Part R19 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-07100KL/311-100KJRCT-ND/729363
+Change Value of Parameter Manufacturer in Part R19 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R19 Old= New=RC0402JR-07100KL
+Change Value of Parameter Specification in Part R19 Old= New=5% 0,063W    
+Change Value of Parameter Supplier in Part R19 Old= New=DigiKey          
+Change Value of Parameter Supplier part number in Part R19 Old= New=311-100KJRCT-ND
+Change Value of Parameter Link in Part R20 Old= New=https://www.digikey.com/product-detail/en/yageo/AC0402JR-071KL/YAG3525CT-ND/6006374
+Change Value of Parameter Manufacturer in Part R20 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R20 Old= New=AC0402JR-071KL 
+Change Value of Parameter Specification in Part R20 Old= New=5% 0,063W
+Change Value of Parameter Supplier in Part R20 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R20 Old= New=YAG3525CT-ND
+Change Value of Parameter Link in Part R21 Old= New=https://www.digikey.com/product-detail/en/yageo/AC0402JR-071KL/YAG3525CT-ND/6006374
+Change Value of Parameter Manufacturer in Part R21 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R21 Old= New=AC0402JR-071KL 
+Change Value of Parameter Specification in Part R21 Old= New=5% 0,063W
+Change Value of Parameter Supplier in Part R21 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R21 Old= New=YAG3525CT-ND
+Change Value of Parameter Link in Part R22 Old= New=https://www.digikey.com/product-detail/en/yageo/AC0402JR-071KL/YAG3525CT-ND/6006374
+Change Value of Parameter Manufacturer in Part R22 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R22 Old= New=AC0402JR-071KL 
+Change Value of Parameter Specification in Part R22 Old= New=5% 0,063W
+Change Value of Parameter Supplier in Part R22 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R22 Old= New=YAG3525CT-ND
+Change Value of Parameter Link in Part R23 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402FR-0724K9L/311-24-9KLRCT-ND/729514
+Change Value of Parameter Manufacturer in Part R23 Old=Any New=Yageo    
+Change Value of Parameter Manufacturer Part No. in Part R23 Old= New=RC0402FR-0724K9L
+Change Value of Parameter Specification in Part R23 Old= New=1% 0,063W  
+Change Value of Parameter Supplier in Part R23 Old= New=DigiKey    
+Change Value of Parameter Supplier part number in Part R23 Old= New=311-24.9KLRCT-ND
+Change Value of Parameter Link in Part R24 Old=Any New=https://www.digikey.com/product-detail/en/yageo/RC0402JR-0712KL/311-12KJRCT-ND/729370
+Change Value of Parameter Manufacturer in Part R24 Old=Any New=Yageo  
+Change Value of Parameter Manufacturer Part No. in Part R24 Old= New=RC0402JR-0712KL
+Change Value of Parameter Specification in Part R24 Old= New=5% 0,063W    
+Change Value of Parameter Supplier in Part R24 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R24 Old= New=311-12KJRCT-ND
+Change Value of Parameter Link in Part R25 Old=https://www.rutronik24.com/search-result/nojs:1337/qs:RC0402JR-07100RL/reset:0 New=https://www.digikey.com/product-detail/en/yageo/SR0402JR-7W100RL/YAG6156CT-ND/9696610
+Change Value of Parameter Manufacturer Part No. in Part R25 Old=RC0402JR-07100RL New=SR0402JR-7W100RL
+Change Value of Parameter Specification in Part R25 Old=5% 0,063W New=5% 0.125W
+Change Value of Parameter Supplier in Part R25 Old=Rutronik New=DigiKey            
+Change Value of Parameter Supplier part number in Part R25 Old=WRC33811 New=YAG6156CT-ND
+Change Value of Parameter Link in Part R26 Old=https://www.rutronik24.com/search-result/nojs:1337/qs:RC0402JR-07100RL/reset:0 New=https://www.digikey.com/product-detail/en/yageo/SR0402JR-7W100RL/YAG6156CT-ND/9696610
+Change Value of Parameter Manufacturer Part No. in Part R26 Old=RC0402JR-07100RL New=SR0402JR-7W100RL
+Change Value of Parameter Specification in Part R26 Old=5% 0,063W New=5% 0.125W
+Change Value of Parameter Supplier in Part R26 Old=Rutronik New=DigiKey            
+Change Value of Parameter Supplier part number in Part R26 Old=WRC33811 New=YAG6156CT-ND
+Change Value of Parameter Link in Part S1 Old=https://www.rutronik24.com/search-result/qs:EVQPUJ02K/reset:0 New=https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-PUJ02K/P10851SCT-ND/286352
+Change Value of Parameter Supplier in Part S1 Old=Rutronik New=DigiKey  
+Change Value of Parameter Supplier part number in Part S1 Old=EVQPUJ02K New=P10851SCT-ND
+Change Value of Parameter Link in Part S2 Old=https://www.rutronik24.com/search-result/qs:EVQPUJ02K/reset:0 New=https://www.digikey.com/product-detail/en/panasonic-electronic-components/EVQ-PUJ02K/P10851SCT-ND/286352
+Change Value of Parameter Supplier in Part S2 Old=Rutronik New=DigiKey  
+Change Value of Parameter Supplier part number in Part S2 Old=EVQPUJ02K New=P10851SCT-ND
+Change Value of Parameter Link in Part U6 Old= New=https://www.digikey.com/products/en?keywords=STM32L072KZT6
+Change Value of Parameter Manufacturer in Part U6 Old= New=STMicroelectronics
+Change Value of Parameter Manufacturer Part No. in Part U6 Old= New=STM32L072KZT6
+Change Value of Parameter Part Description in Part U6 Old= New=Ultra-low-power 32-bit MCU Arm®-based Cortex®-M0+
+Change Value of Parameter Specification in Part U6 Old= New=192KB, 20KB, 1.65V-3.6V
+Change Value of Parameter Supplier in Part U6 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part U6 Old= New=497-19668-ND
+Change Value of Parameter Value in Part U6 Old= New=STM32L072KZT6

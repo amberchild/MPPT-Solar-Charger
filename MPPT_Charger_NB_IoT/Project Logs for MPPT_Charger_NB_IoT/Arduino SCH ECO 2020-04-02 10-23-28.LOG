@@ -1,0 +1,7 @@
+Change Value of Parameter Link in Part P1 Old=http://www.adam-tech.com/products.php New=https://www.digikey.com/product-detail/en/sparkfun-electronics/PRT-11417/1568-1413-ND/6161755
+Change Value of Parameter Manufacturer in Part P1 Old=ADAM TECH New=SparkFun Electronics
+Change Value of Parameter Manufacturer Part No. in Part P1 Old=RS1-10-G New=PRT-11417
+Change Value of Parameter Part Description in Part P1 Old=Arduino Connector New=ARDUINO STACKABLE HEADER KIT - R
+Change Value of Parameter Supplier in Part P1 Old=Rutronik New=DigiKey
+Change Value of Parameter Supplier part number in Part P1 Old=CONN1443 New=1568-1413-ND
+Change Value of Parameter Value in Part P1 Old=RS1-10-G New=PRT-11417

@@ -1,0 +1,52 @@
+Added Component: Designator=U4(QFN-16_custom)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Link"; Value = "http://lt.farnell.com/texas-instruments/bq24650rvat/ic-batt-charger-li-ion-10a-qfn/dp/2125812"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "TEXAS INSTRUMENTS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part No."; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Description"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part No."; Value = "BQ24650RVAT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Spec."; Value = "26V, 10A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Specification"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier part number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "BQ24650RVAT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=U7(QFN-6_custom)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Link"; Value = "http://lt.farnell.com/texas-instruments/tps61165drvt/ic-led-driver-high-bright-6-son/dp/1755590RL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "TEXAS INSTRUMENTS"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part No."; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part Description"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Part No."; Value = "TPS61165DRVT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Spec."; Value = "1.2A, 38V"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Specification"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier part number"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "TPS61165DRVT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Vendor"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC7_2 Pin=U4-1
+Added Pin To Net: NetName=VMPP Pin=U4-2
+Added Pin To Net: NetName=STATUS2 Pin=U4-3
+Added Pin To Net: NetName=SENSOR Pin=U4-4
+Added Pin To Net: NetName=STATUS1 Pin=U4-5
+Added Pin To Net: NetName=VREF Pin=U4-6
+Added Pin To Net: NetName=VREF Pin=U4-7
+Added Pin To Net: NetName=NetC16_2 Pin=U4-8
+Added Pin To Net: NetName=SR_N Pin=U4-9
+Added Pin To Net: NetName=SR_P Pin=U4-10
+Added Pin To Net: NetName=GND Pin=U4-11
+Added Pin To Net: NetName=NetC12_2 Pin=U4-12
+Added Pin To Net: NetName=NetQ4_4 Pin=U4-13
+Added Pin To Net: NetName=NetC14_2 Pin=U4-14
+Added Pin To Net: NetName=NetQ2_4 Pin=U4-15
+Added Pin To Net: NetName=NetC14_1 Pin=U4-16
+Added Pin To Net: NetName=GND Pin=U4-17
+Added Pin To Net: NetName=NetP9_2 Pin=U7-1
+Added Pin To Net: NetName=NetC31_1 Pin=U7-2
+Added Pin To Net: NetName=GND Pin=U7-3
+Added Pin To Net: NetName=NetD3_1 Pin=U7-4
+Added Pin To Net: NetName=NetR27_2 Pin=U7-5
+Added Pin To Net: NetName=SR_N Pin=U7-6
+Added Pin To Net: NetName=GND Pin=U7-7
+Added Member To Class: ClassName=Charger Member=Component U4 BQ24650
+Added Member To Class: ClassName=LED Driver Member=Component U7 TPS61165

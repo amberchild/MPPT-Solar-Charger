@@ -1,0 +1,30 @@
+Removed Parameter Part No.:Any from Part R1
+Removed Parameter Part No.:C3216Y5V1H475Z from Part C1
+Removed Parameter Part No.: from Part P1
+Removed Parameter Part No.: from Part P2
+Removed Parameter Part No.: from Part P3
+Removed Parameter Part No.: from Part P4
+Removed Parameter Spec.:0.125W, ±1% from Part R1
+Removed Parameter Spec.:50V, Y5V from Part C1
+Removed Parameter Spec.: from Part P1
+Removed Parameter Spec.: from Part P2
+Removed Parameter Spec.: from Part P3
+Removed Parameter Spec.: from Part P4
+Removed Parameter Vendor: from Part C1
+Removed Parameter Vendor: from Part P1
+Removed Parameter Vendor: from Part P2
+Removed Parameter Vendor: from Part P3
+Removed Parameter Vendor: from Part P4
+Removed Parameter Vendor: from Part R1
+Change Value of Parameter Link in Part C1 Old=http://lt.farnell.com/tdk/c32165v1h475z/capacitor-4-7uf-50v5v-1206/dp/2112719?in_merch=New%20Products New=https://www.digikey.com/product-detail/en/tdk-corporation/CGA2B3X7R1V104K050BB/445-6901-1-ND/2672919
+Change Value of Parameter Manufacturer in Part C1 Old=TDK New=TDK Corporation
+Change Value of Parameter Manufacturer Part No. in Part C1 Old= New=CGA2B3X7R1V104K050BB
+Change Value of Parameter Specification in Part C1 Old= New=X7R, 35V, 10%    
+Change Value of Parameter Supplier in Part C1 Old= New=DigiKey            
+Change Value of Parameter Supplier part number in Part C1 Old= New=445-6901-1-ND
+Change Value of Parameter Link in Part R1 Old= New=https://www.digikey.com/product-detail/en/yageo/AC0402JR-071KL/YAG3525CT-ND/6006374
+Change Value of Parameter Manufacturer in Part R1 Old=Any New=Yageo
+Change Value of Parameter Manufacturer Part No. in Part R1 Old= New=AC0402JR-071KL 
+Change Value of Parameter Specification in Part R1 Old= New=5% 0,063W
+Change Value of Parameter Supplier in Part R1 Old= New=DigiKey
+Change Value of Parameter Supplier part number in Part R1 Old= New=YAG3525CT-ND

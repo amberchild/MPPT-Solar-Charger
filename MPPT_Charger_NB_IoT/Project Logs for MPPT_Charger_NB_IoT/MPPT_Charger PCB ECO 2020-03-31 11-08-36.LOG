@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=NetC4_1 Pin=P7-1
+Removed Pin From Net: NetName=GND Pin=P7-2
+Removed Member From Class: ClassName=Charger Member=P7
+Change Component Footprint: Designator=P6 Old Footprint=TERM2PIN5MM New Footprint=TERM4pin5mm
+Change Component Comment : Designator=P6 Old Comment=LOAD New Comment=Battery&Load
+Change component parameters: Designator = "P6"; Footprint = "TERM4pin5mm"; UniqueID = "\NMDDQVZW"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "LatestRevisionDate"; Value = "17-Jul-2002"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LatestRevisionNote"; Value = "Re-released for DXP Platform."; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Publisher"; Value = "Altium Limited"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=P6-3
+Added Pin To Net: NetName=NetC4_1 Pin=P6-4

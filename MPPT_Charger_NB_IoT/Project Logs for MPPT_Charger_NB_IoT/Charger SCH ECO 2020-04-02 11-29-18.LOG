@@ -1,0 +1,18 @@
+Change Component Parameter Comment in F1 Old= New=10A, 24V
+Change Value of Parameter Link in Part F1 Old=https://www.digikey.com/product-detail/en/yageo/AC2010JK-070RL/YAG4019CT-ND/6006868 New=https://uk.farnell.com/littelfuse/1206sfh100f-24-2/fuse-1206-10a/dp/1832124
+Change Value of Parameter Manufacturer in Part F1 Old=Yageo New=LITTELFUSE
+Change Value of Parameter Manufacturer Part No. in Part F1 Old=AC2010JK-070RL New=1206SFH100F/24-2
+Change Value of Parameter Part Description in Part F1 Old=0 Ohms Jumper New=Fast Acting  Fuse
+Change Value of Parameter Specification in Part F1 Old=0.75W New=100A
+Change Value of Parameter Supplier in Part F1 Old=DigiKey New=Farnell
+Change Value of Parameter Supplier part number in Part F1 Old=YAG4019CT-ND New=1832124 
+Change Value of Parameter Value in Part F1 Old=AC2010JK-070RL New=1206SFH100F/24-2
+Change Component Parameter Comment in F2 Old= New=10A, 24V
+Change Value of Parameter Link in Part F2 Old=https://www.digikey.com/product-detail/en/yageo/AC2010JK-070RL/YAG4019CT-ND/6006868 New=https://uk.farnell.com/littelfuse/1206sfh100f-24-2/fuse-1206-10a/dp/1832124
+Change Value of Parameter Manufacturer in Part F2 Old=Yageo New=LITTELFUSE
+Change Value of Parameter Manufacturer Part No. in Part F2 Old=AC2010JK-070RL New=1206SFH100F/24-2
+Change Value of Parameter Part Description in Part F2 Old=0 Ohms Jumper New=Fast Acting  Fuse
+Change Value of Parameter Specification in Part F2 Old=0.75W New=100A
+Change Value of Parameter Supplier in Part F2 Old=DigiKey New=Farnell
+Change Value of Parameter Supplier part number in Part F2 Old=YAG4019CT-ND New=1832124 
+Change Value of Parameter Value in Part F2 Old=AC2010JK-070RL New=1206SFH100F/24-2
