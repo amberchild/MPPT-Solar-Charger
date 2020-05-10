@@ -6,6 +6,6 @@ main.c:301:6:MX_TIM21_Init	32	static
 main.c:346:6:MX_TIM22_Init	32	static
 main.c:389:6:MX_DMA_Init	16	static
 main.c:407:6:MX_GPIO_Init	48	static
-main.c:464:6:StartDefaultTask	16	static
-main.c:492:6:HAL_TIM_PeriodElapsedCallback	16	static
-main.c:514:6:Error_Handler	8	static
+main.c:464:6:StartDefaultTask	24	static
+main.c:486:6:HAL_TIM_PeriodElapsedCallback	16	static
+main.c:508:6:Error_Handler	8	static

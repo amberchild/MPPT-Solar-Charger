@@ -47,9 +47,9 @@ typedef struct
 	uint32_t vinput_mv;
 	uint32_t vbatt_mv;
 	uint32_t vard_input_mv;
-	uint32_t cinput_ma;
-	uint32_t coutput_ma;
-	int32_t energy_mah;
+	int32_t cinput_ma;
+	int32_t coutput_ma;
+	float energy_mah;
 	uint32_t daylength_s;
 
 }DevStorageTypDef;

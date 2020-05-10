@@ -40,6 +40,29 @@ void MonitorTask(void const * argument)
 		  memcpy(local_adc_data, storage.adc_data, sizeof(storage.adc_data));
 
 		  /*Convert&Store Input Voltage*/
+		  storage.vinput_mv = (uint32_t)(local_adc_data[2] * VINPUT_CONST);
+
+		  /*Convert&Store Battery Voltage*/
+		  storage.vbatt_mv = (uint32_t)(local_adc_data[3] * VBATT_CONST);
+
+		  /*Convert&Store Arduino Input Voltage*/
+		  storage.vard_input_mv = (uint32_t)(local_adc_data[4] * VARD_CONST);
+
+		  /*Convert&Store Input Current*/
+		  storage.cinput_ma = (int32_t)((local_adc_data[0] - COFFSET_CONST) * CSENSE_CONST);
+
+		  /*Convert&Store Output Current*/
+		  storage.coutput_ma = (int32_t)((local_adc_data[1] -COFFSET_CONST) * CSENSE_CONST);
+
+		  /*Convert&Store Energy Accumulated*/
+		  storage.energy_mah += (float)((storage.cinput_ma * ETIME_CONST) - (storage.coutput_ma * ETIME_CONST));
+
+		  /*Do the day length time tracking*/
+		  if(storage.vinput_mv > VINPUT_LIMIT)
+		  {
+			  mon_dayticks++;
+			  storage.daylength_s = (uint32_t)(mon_dayticks/10);
+		  }
 	  }
   }
 }

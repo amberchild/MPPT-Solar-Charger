@@ -464,19 +464,13 @@ void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
-	//uint32_t intensity_test = 0;
+	uint32_t intensity_test = 0;
+	//uint32_t intensity_test = 31;
+	osMessagePut(led_msg, intensity_test, osWaitForever);
   /* Infinite loop */
   for(;;)
   {
     osDelay(1);
-    /*
-    osMessagePut(led_msg, intensity_test, osWaitForever);
-    intensity_test++;
-    if(intensity_test > 31)
-    {
-    	intensity_test = 0;
-    }
-    */
   }
   /* USER CODE END 5 */ 
 }
