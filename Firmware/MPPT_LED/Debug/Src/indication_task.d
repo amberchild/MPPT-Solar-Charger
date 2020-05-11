@@ -1,5 +1,5 @@
-Src/main.o: ../Src/main.c ../Inc/main.h \
- ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
+Src/indication_task.o: ../Src/indication_task.c ../Inc/indication_task.h \
+ ../Inc/main.h ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal.h \
  ../Inc/stm32l0xx_hal_conf.h \
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_rcc.h \
  ../Drivers/STM32L0xx_HAL_Driver/Inc/stm32l0xx_hal_def.h \
@@ -44,8 +44,9 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../Inc/led_control_task.h ../Inc/monitor_task.h ../Inc/main.h \
- ../Inc/indication_task.h
+ ../Inc/main.h
+
+../Inc/indication_task.h:
 
 ../Inc/main.h:
 
@@ -139,10 +140,4 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
 
-../Inc/led_control_task.h:
-
-../Inc/monitor_task.h:
-
 ../Inc/main.h:
-
-../Inc/indication_task.h:

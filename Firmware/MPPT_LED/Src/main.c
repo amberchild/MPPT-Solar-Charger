@@ -26,6 +26,7 @@
 /* USER CODE BEGIN Includes */
 #include "led_control_task.h"
 #include "monitor_task.h"
+#include "indication_task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -126,6 +127,7 @@ int main(void)
 
   /* USER CODE BEGIN RTOS_QUEUES */
   led_msg = osMessageCreate (&led_msg_def, LEDControlTaskHandle);
+  ind_msg = osMessageCreate (&ind_msg_def, IndicationTaskHandle);
   /* USER CODE END RTOS_QUEUES */
 
   /* Create the thread(s) */
@@ -142,6 +144,10 @@ int main(void)
   /* Monitoring Task */
   osThreadDef(monitoring, MonitorTask, osPriorityHigh, 0, 128);
   MonitorTaskHandle = osThreadCreate(osThread(monitoring), NULL);
+
+  /* Indication Task */
+  osThreadDef(indication, IndicationTask, osPriorityAboveNormal, 0, 128);
+  MonitorTaskHandle = osThreadCreate(osThread(indication), NULL);
 
   /* USER CODE END RTOS_THREADS */
 
@@ -419,7 +425,7 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(GPIOB, LED_CTRL_Pin|CHR_CTRL_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOA, LED_IND_Pin|VMON_CLK_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(VMON_CLK_GPIO_Port, VMON_CLK_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin : SPI1_CS_Pin */
   GPIO_InitStruct.Pin = SPI1_CS_Pin;
@@ -435,12 +441,18 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : LED_IND_Pin VMON_CLK_Pin */
-  GPIO_InitStruct.Pin = LED_IND_Pin|VMON_CLK_Pin;
+  /*Configure GPIO pin : LED_IND_Pin */
+  GPIO_InitStruct.Pin = LED_IND_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  HAL_GPIO_Init(LED_IND_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : VMON_CLK_Pin */
+  GPIO_InitStruct.Pin = VMON_CLK_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+  HAL_GPIO_Init(VMON_CLK_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : STAT2_Pin STAT1_Pin */
   GPIO_InitStruct.Pin = STAT2_Pin|STAT1_Pin;
@@ -464,9 +476,12 @@ void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
+
 	uint32_t intensity_test = 0;
-	//uint32_t intensity_test = 31;
 	osMessagePut(led_msg, intensity_test, osWaitForever);
+
+	intensity_test = 2;
+	osMessagePut(ind_msg, intensity_test, osWaitForever);
   /* Infinite loop */
   for(;;)
   {

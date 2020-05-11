@@ -34,8 +34,6 @@ void MonitorTask(void const * argument)
 	  evt = osSignalWait (0x00000001, osWaitForever);
 	  if (evt.status == osEventSignal)
 	  {
-		  HAL_GPIO_TogglePin(LED_IND_GPIO_Port, LED_IND_Pin);
-
 		  /*Copy all ADC data measured with DMA*/
 		  memcpy(local_adc_data, storage.adc_data, sizeof(storage.adc_data));
 
@@ -55,13 +53,20 @@ void MonitorTask(void const * argument)
 		  storage.coutput_ma = (int32_t)((local_adc_data[1] -COFFSET_CONST) * CSENSE_CONST);
 
 		  /*Convert&Store Energy Accumulated*/
-		  storage.energy_mah += (float)((storage.cinput_ma * ETIME_CONST) - (storage.coutput_ma * ETIME_CONST));
+		  storage.energy_stored_mah += (float)(storage.cinput_ma * ETIME_CONST);
+
+		  /*Convert&Store Energy Released*/
+		  storage.energy_released_mah += (float)(storage.coutput_ma * ETIME_CONST);
 
 		  /*Do the day length time tracking*/
 		  if(storage.vinput_mv > VINPUT_LIMIT)
 		  {
 			  mon_dayticks++;
 			  storage.daylength_s = (uint32_t)(mon_dayticks/10);
+		  }
+		  else
+		  {
+			  mon_dayticks = 0;
 		  }
 	  }
   }

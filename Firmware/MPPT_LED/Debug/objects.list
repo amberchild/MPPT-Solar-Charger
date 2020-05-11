@@ -26,6 +26,7 @@
 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/port.o"
 "Middlewares/Third_Party/FreeRTOS/Source/portable/MemMang/heap_4.o"
 "Src/freertos.o"
+"Src/indication_task.o"
 "Src/led_control_task.o"
 "Src/main.o"
 "Src/monitor_task.o"

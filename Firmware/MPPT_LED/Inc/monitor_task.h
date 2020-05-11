@@ -20,8 +20,6 @@
 #define ETIME_CONST		0.0000277778
 
 extern osThreadId MonitorTaskHandle;
-extern osSemaphoreId MonSemaphore;
-extern const osSemaphoreDef_t MonSemaphoreDef;
 extern DevStorageTypDef storage;
 
 void MonitorTask(void const * argument);
