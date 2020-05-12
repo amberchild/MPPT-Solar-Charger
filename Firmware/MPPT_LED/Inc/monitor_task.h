@@ -11,8 +11,11 @@
 #include "main.h"
 #include "cmsis_os.h"
 
+#define MPPT_MV			17500
 #define VINPUT_LIMIT	8000
+#define VINPUT_HYS		100
 #define VINPUT_CONST	7.371
+#define FULL_BATT_MV	12600
 #define VBATT_CONST		4.000
 #define VARD_CONST		0.806
 #define CSENSE_CONST	1.943

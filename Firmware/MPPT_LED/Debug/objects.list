@@ -29,6 +29,7 @@
 "Src/indication_task.o"
 "Src/led_control_task.o"
 "Src/main.o"
+"Src/management_task.o"
 "Src/monitor_task.o"
 "Src/stm32l0xx_hal_msp.o"
 "Src/stm32l0xx_hal_timebase_tim.o"

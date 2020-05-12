@@ -27,6 +27,7 @@
 #include "led_control_task.h"
 #include "monitor_task.h"
 #include "indication_task.h"
+#include "management_task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -148,6 +149,10 @@ int main(void)
   /* Indication Task */
   osThreadDef(indication, IndicationTask, osPriorityAboveNormal, 0, 128);
   MonitorTaskHandle = osThreadCreate(osThread(indication), NULL);
+
+  /* Management Task */
+  osThreadDef(management, ManagementTask, osPriorityNormal, 0, 128);
+  ManagementTaskHandle = osThreadCreate(osThread(management), NULL);
 
   /* USER CODE END RTOS_THREADS */
 
