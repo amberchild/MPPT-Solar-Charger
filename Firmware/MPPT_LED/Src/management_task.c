@@ -15,7 +15,8 @@ osThreadId ManagementTaskHandle;
 void ManagementTask(void const * argument)
 {
 	ch_state_t ch_status = UNKNOWN;
-	_Bool battery_charged = 0;
+	static _Bool battery_charged = 0;
+	static int32_t max_idle_current = 0;
 
 	for(;;)
 	{
@@ -28,7 +29,7 @@ void ManagementTask(void const * argument)
 			if(storage.vinput_mv+VINPUT_HYS > MPPT_MV)
 			{
 				charger_enable();
-				osDelay(1000);
+				osDelay(5000);
 				ch_status = charger_status();
 
 				while(ch_status == IN_PROGRESS)
@@ -66,6 +67,71 @@ void ManagementTask(void const * argument)
 		{
 			charger_disable();
 			osMessagePut(ind_msg, IND_OFF, osWaitForever);
+
+			/*Load the battery with LEDs*/
+			if(battery_charged)
+			{
+				load_setup(FULL_BATT_MAH, HOURS_24 - storage.daylength_s);
+				storage.energy_released_mah = 0;
+			}
+			else
+			{
+				storage.energy_stored_mah = storage.energy_stored_mah - storage.energy_released_mah;
+				storage.energy_released_mah = 0;
+				if(storage.energy_stored_mah > 0)
+				{
+					load_setup(storage.energy_stored_mah, HOURS_24 - storage.daylength_s);
+				}
+			}
+
+			/*Discharge battery with LEDs*/
+			osMessagePut(ind_msg, IND_RED, osWaitForever);
+			while(1)
+			{
+				osDelay(1000);
+
+				/*Day time?*/
+				if(storage.vinput_mv+VINPUT_HYS > VINPUT_LIMIT)
+				{
+					break;
+				}
+
+				/*Low battery?*/
+				if(storage.vbatt_mv < BATT_LOW_MV)
+				{
+					break;
+				}
+
+				/*Out of energy?*/
+				if(storage.energy_stored_mah - storage.energy_released_mah < 0)
+				{
+					break;
+				}
+			}
+
+			/*End discharge process*/
+			battery_charged = 0;
+			storage.daylength_s = 0;
+			osMessagePut(led_msg, 0, osWaitForever);
+			osMessagePut(ind_msg, IND_OFF, osWaitForever);
+		}
+
+		/*Energy bleed check in idle state*/
+		if(battery_charged)
+		{
+			if(storage.coutput_ma > max_idle_current)
+			{
+				max_idle_current = storage.coutput_ma;
+			}
+			if(max_idle_current > IDLE_CURR_MA)
+			{
+				max_idle_current = 0;
+				battery_charged = 0;
+			}
+			if(storage.energy_released_mah > IDLE_CURR_MAH)
+			{
+				battery_charged = 0;
+			}
 		}
 	}
 }
@@ -113,7 +179,36 @@ ch_state_t charger_status(void)
 	return UNKNOWN;
 }
 
-void load_setup(uint32_t capacity, uint32_t nightitme)
+uint32_t load_setup(uint32_t capacity, uint32_t nightitme)
 {
+	uint32_t intensity;
+	uint32_t mAseconds;
 
+	/*Full load if time is too short*/
+	if(nightitme < MIN_NIGHT_DUR)
+	{
+		intensity = 31;
+		osMessagePut(led_msg, intensity, osWaitForever);
+		return intensity;
+	}
+
+	/*Decrease capacity to have more realistic results*/
+	capacity = capacity * DRIVER_EFF;
+
+	/*Convert capacity to mAs*/
+	mAseconds = capacity*3600;
+
+	/*Look for load to have LEDs operational over night time*/
+	for(intensity = 0; intensity < 32; intensity++)
+	{
+		osMessagePut(led_msg, intensity, osWaitForever);
+		osDelay(300);
+		if(storage.coutput_ma*nightitme > mAseconds)
+		{
+			osMessagePut(led_msg, intensity-1, osWaitForever);
+			return intensity;
+		}
+	}
+
+	return intensity;
 }

@@ -24,7 +24,7 @@ typedef enum
 void charger_enable(void);
 void charger_disable(void);
 ch_state_t charger_status(void);
-void load_setup(uint32_t capacity, uint32_t nightitme);
+uint32_t load_setup(uint32_t capacity, uint32_t nightitme);
 void ManagementTask(void const * argument);
 
 #endif /* MANAGEMENT_TASK_H_ */

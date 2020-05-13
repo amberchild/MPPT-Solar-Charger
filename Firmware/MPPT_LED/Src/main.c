@@ -483,7 +483,6 @@ void StartDefaultTask(void const * argument)
   /* USER CODE BEGIN 5 */
 
 	uint32_t intensity_test = 0;
-	osMessagePut(led_msg, intensity_test, osWaitForever);
 
 	intensity_test = 2;
 	osMessagePut(ind_msg, intensity_test, osWaitForever);

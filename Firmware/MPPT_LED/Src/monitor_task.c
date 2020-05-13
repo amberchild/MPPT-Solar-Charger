@@ -59,7 +59,7 @@ void MonitorTask(void const * argument)
 		  storage.energy_released_mah += (float)(storage.coutput_ma * ETIME_CONST);
 
 		  /*Do the day length time tracking*/
-		  if(storage.vinput_mv > VINPUT_LIMIT)
+		  if(storage.vinput_mv+VINPUT_HYS > VINPUT_LIMIT)
 		  {
 			  mon_dayticks++;
 			  storage.daylength_s = (uint32_t)(mon_dayticks/10);

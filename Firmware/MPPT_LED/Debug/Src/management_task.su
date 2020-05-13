@@ -1,5 +1,5 @@
 management_task.c:15:6:ManagementTask	32	static
-management_task.c:73:6:charger_enable	8	static
-management_task.c:77:6:charger_disable	8	static
-management_task.c:82:12:charger_status	16	static
-management_task.c:116:6:load_setup	16	static
+management_task.c:139:6:charger_enable	8	static
+management_task.c:143:6:charger_disable	8	static
+management_task.c:148:12:charger_status	16	static
+management_task.c:182:10:load_setup	32	static
