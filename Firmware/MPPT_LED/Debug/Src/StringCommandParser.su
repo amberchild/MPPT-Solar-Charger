@@ -1,0 +1,13 @@
+StringCommandParser.c:25:6:SCP_ByteReceived	16	static
+StringCommandParser.c:44:6:SCP_Tick	24	static
+StringCommandParser.c:53:6:SCP_UpCase	16	static
+StringCommandParser.c:59:6:SCP_Init	32	static
+StringCommandParser.c:74:10:SCP_AddCallback	24	static
+StringCommandParser.c:89:6:SCP_Process	16	static
+StringCommandParser.c:109:6:SCP_GetBuff	16	static
+StringCommandParser.c:133:14:SCP_CheckCommand	32	static
+StringCommandParser.c:178:9:SCP_SendCommandWaitAnswer	48	static
+StringCommandParser.c:201:9:SCP_SendDoubleCommandWaitAnswer	56	static
+StringCommandParser.c:247:7:SCP_InitRx	8	static
+StringCommandParser.c:253:7:SCP_SendData	16	static
+StringCommandParser.c:258:8:SCP_WaitForAnswer	32	static

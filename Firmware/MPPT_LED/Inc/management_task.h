@@ -11,6 +11,7 @@
 #include "main.h"
 #include "cmsis_os.h"
 
+extern EEPROMStorageTypDef eeprom_info;
 extern osThreadId ManagementTaskHandle;
 
 typedef enum

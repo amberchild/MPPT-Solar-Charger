@@ -56,6 +56,18 @@ typedef struct
 
 }DevStorageTypDef;
 
+typedef struct
+{
+	float total_batt_ouput_ah;
+	uint16_t vin_limit_mv;
+	uint16_t vin_hys_mv;
+	uint16_t batt_full_mv;
+	uint16_t batt_full_mah;
+	uint16_t batt_low_mv;
+	uint32_t crc;
+
+}EEPROMStorageTypDef;
+
 /* USER CODE END ET */
 
 /* Exported constants --------------------------------------------------------*/
@@ -72,7 +84,8 @@ typedef struct
 void Error_Handler(void);
 
 /* USER CODE BEGIN EFP */
-
+void eeprom_ram_init(EEPROMStorageTypDef *eeprom);
+void eeprom_save(EEPROMStorageTypDef *eeprom);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
@@ -86,8 +99,14 @@ void Error_Handler(void);
 #define VBAT_GPIO_Port GPIOA
 #define VAUX_Pin GPIO_PIN_4
 #define VAUX_GPIO_Port GPIOA
-#define SPI1_CS_Pin GPIO_PIN_0
-#define SPI1_CS_GPIO_Port GPIOB
+#define ON_OFF_Pin GPIO_PIN_5
+#define ON_OFF_GPIO_Port GPIOA
+#define LDO_OFF_Pin GPIO_PIN_6
+#define LDO_OFF_GPIO_Port GPIOA
+#define RESET_Pin GPIO_PIN_7
+#define RESET_GPIO_Port GPIOA
+#define LDO_OK_Pin GPIO_PIN_0
+#define LDO_OK_GPIO_Port GPIOB
 #define LED_CTRL_Pin GPIO_PIN_1
 #define LED_CTRL_GPIO_Port GPIOB
 #define LED_IND_Pin GPIO_PIN_8

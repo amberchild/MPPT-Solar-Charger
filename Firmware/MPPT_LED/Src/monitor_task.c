@@ -10,6 +10,7 @@
 #include "stdio.h"
 #include "string.h"
 
+extern EEPROMStorageTypDef eeprom_info;
 osThreadId MonitorTaskHandle;
 DevStorageTypDef storage;
 
@@ -48,21 +49,34 @@ void MonitorTask(void const * argument)
 
 		  /*Convert&Store Input Current*/
 		  storage.cinput_ma = (int32_t)((local_adc_data[0] - COFFSET_CONST) * CSENSE_CONST);
+		  if(storage.cinput_ma < 0)
+		  {storage.cinput_ma = 0;}
 
 		  /*Convert&Store Output Current*/
 		  storage.coutput_ma = (int32_t)((local_adc_data[1] -COFFSET_CONST) * CSENSE_CONST);
+		  if(storage.coutput_ma < 0)
+		  {storage.coutput_ma = 0;}
 
 		  /*Convert&Store Energy Accumulated*/
 		  storage.energy_stored_mah += (float)(storage.cinput_ma * ETIME_CONST);
+		  if(storage.energy_stored_mah > FULL_BATT_MAH)
+		  {storage.energy_stored_mah = FULL_BATT_MAH;}
 
 		  /*Convert&Store Energy Released*/
 		  storage.energy_released_mah += (float)(storage.coutput_ma * ETIME_CONST);
+		  if(storage.energy_released_mah > FULL_BATT_MAH)
+		  {storage.energy_released_mah = FULL_BATT_MAH;}
+
+		  /*Convert&Store Total Battery Energy Output*/
+		  storage.total_batt_ouput_ah += (float)((storage.coutput_ma * ETIME_CONST)/1000);
 
 		  /*Do the day length time tracking*/
-		  if(storage.vinput_mv+VINPUT_HYS > VINPUT_LIMIT)
+		  if(storage.vinput_mv+eeprom_info.vin_hys_mv > eeprom_info.vin_limit_mv)
 		  {
 			  mon_dayticks++;
 			  storage.daylength_s = (uint32_t)(mon_dayticks/10);
+			  if(storage.daylength_s > HOURS_24)
+			  {storage.daylength_s = HOURS_24;}
 		  }
 		  else
 		  {

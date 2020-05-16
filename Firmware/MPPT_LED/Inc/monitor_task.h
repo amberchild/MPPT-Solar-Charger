@@ -13,7 +13,7 @@
 
 #define MPPT_MV			17500
 #define VINPUT_LIMIT	8000
-#define VINPUT_HYS		100
+#define VINPUT_HYS		1000
 #define VINPUT_CONST	7.371
 #define FULL_BATT_MV	12600
 #define FULL_BATT_MAH	12800
@@ -27,7 +27,7 @@
 #define HOURS_24		86400
 #define IDLE_CURR_MA	20
 #define IDLE_CURR_MAH	120
-#define MIN_NIGHT_DUR	14400
+#define MIN_DAY_DUR		3600
 
 extern osThreadId MonitorTaskHandle;
 extern DevStorageTypDef storage;

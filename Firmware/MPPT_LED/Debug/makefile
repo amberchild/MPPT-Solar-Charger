@@ -44,8 +44,8 @@ MPPT_LED.bin \
 all: MPPT_LED.elf secondary-outputs
 
 # Tool invocations
-MPPT_LED.elf: $(OBJS) $(USER_OBJS) E:\Darbinis\My\ Documents\workspace\MPPT_LED_V2\MPPT_LED\STM32L072KZTX_FLASH.ld
-	arm-none-eabi-gcc -o "MPPT_LED.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"E:\Darbinis\My Documents\workspace\MPPT_LED_V2\MPPT_LED\STM32L072KZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPPT_LED.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+MPPT_LED.elf: $(OBJS) $(USER_OBJS) C:\Users\gdr\workspace\MPPT_LED\STM32L072KZTX_FLASH.ld
+	arm-none-eabi-gcc -o "MPPT_LED.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\gdr\workspace\MPPT_LED\STM32L072KZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPPT_LED.map" -Wl,--gc-sections -static  -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 

@@ -28,6 +28,10 @@
 #include "monitor_task.h"
 #include "indication_task.h"
 #include "management_task.h"
+#include "eeprom.h"
+#include "modem.h"
+#include "StringCommandParser.h"
+#include "string.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -48,12 +52,20 @@
 ADC_HandleTypeDef hadc;
 DMA_HandleTypeDef hdma_adc;
 
+CRC_HandleTypeDef hcrc;
+
+TIM_HandleTypeDef htim7;
 TIM_HandleTypeDef htim21;
 TIM_HandleTypeDef htim22;
 
+UART_HandleTypeDef huart1;
+DMA_HandleTypeDef hdma_usart1_rx;
+DMA_HandleTypeDef hdma_usart1_tx;
+
 osThreadId defaultTaskHandle;
 /* USER CODE BEGIN PV */
-
+EEPROMStorageTypDef eeprom_info;
+uint8_t aRxBuffer;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -63,6 +75,9 @@ void MX_DMA_Init(void);
 void MX_ADC_Init(void);
 void MX_TIM22_Init(void);
 void MX_TIM21_Init(void);
+static void MX_CRC_Init(void);
+static void MX_USART1_UART_Init(void);
+static void MX_TIM7_Init(void);
 void StartDefaultTask(void const * argument);
 
 static void MX_NVIC_Init(void);
@@ -107,10 +122,23 @@ int main(void)
   MX_ADC_Init();
   MX_TIM22_Init();
   MX_TIM21_Init();
+  MX_CRC_Init();
+  MX_USART1_UART_Init();
+  MX_TIM7_Init();
 
   /* Initialize interrupts */
   MX_NVIC_Init();
   /* USER CODE BEGIN 2 */
+
+  eeprom_ram_init(&eeprom_info);
+
+  /*AT parser initialisation*/
+ SCP_Init(uart_send_buff, uart_read_byte);
+
+ /*Reset AT Parser rx buffer */
+ SCP_InitRx();
+
+ /*AT Callbacks Register*/
 
   /* USER CODE END 2 */
 
@@ -133,25 +161,25 @@ int main(void)
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 64);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
 
   /* LED Control Task */
-  osThreadDef(ledcontrol, LEDControlTask, osPriorityAboveNormal, 0, 128);
+  osThreadDef(ledcontrol, LEDControlTask, osPriorityAboveNormal, 0, 64);
   LEDControlTaskHandle = osThreadCreate(osThread(ledcontrol), NULL);
 
   /* Monitoring Task */
-  osThreadDef(monitoring, MonitorTask, osPriorityHigh, 0, 128);
+  osThreadDef(monitoring, MonitorTask, osPriorityHigh, 0, 64);
   MonitorTaskHandle = osThreadCreate(osThread(monitoring), NULL);
 
   /* Indication Task */
-  osThreadDef(indication, IndicationTask, osPriorityAboveNormal, 0, 128);
-  MonitorTaskHandle = osThreadCreate(osThread(indication), NULL);
+  osThreadDef(indication, IndicationTask, osPriorityAboveNormal, 0, 64);
+  IndicationTaskHandle = osThreadCreate(osThread(indication), NULL);
 
   /* Management Task */
-  osThreadDef(management, ManagementTask, osPriorityNormal, 0, 128);
+  osThreadDef(management, ManagementTask, osPriorityNormal, 0, 1024);
   ManagementTaskHandle = osThreadCreate(osThread(management), NULL);
 
   /* USER CODE END RTOS_THREADS */
@@ -179,6 +207,7 @@ void SystemClock_Config(void)
 {
   RCC_OscInitTypeDef RCC_OscInitStruct = {0};
   RCC_ClkInitTypeDef RCC_ClkInitStruct = {0};
+  RCC_PeriphCLKInitTypeDef PeriphClkInit = {0};
 
   /** Configure the main internal regulator output voltage 
   */
@@ -206,6 +235,12 @@ void SystemClock_Config(void)
   RCC_ClkInitStruct.APB2CLKDivider = RCC_HCLK_DIV1;
 
   if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_USART1;
+  PeriphClkInit.Usart1ClockSelection = RCC_USART1CLKSOURCE_PCLK2;
+  if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
   {
     Error_Handler();
   }
@@ -305,6 +340,75 @@ void MX_ADC_Init(void)
 }
 
 /**
+  * @brief CRC Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_CRC_Init(void)
+{
+
+  /* USER CODE BEGIN CRC_Init 0 */
+
+  /* USER CODE END CRC_Init 0 */
+
+  /* USER CODE BEGIN CRC_Init 1 */
+
+  /* USER CODE END CRC_Init 1 */
+  hcrc.Instance = CRC;
+  hcrc.Init.DefaultPolynomialUse = DEFAULT_POLYNOMIAL_ENABLE;
+  hcrc.Init.DefaultInitValueUse = DEFAULT_INIT_VALUE_ENABLE;
+  hcrc.Init.InputDataInversionMode = CRC_INPUTDATA_INVERSION_NONE;
+  hcrc.Init.OutputDataInversionMode = CRC_OUTPUTDATA_INVERSION_DISABLE;
+  hcrc.InputDataFormat = CRC_INPUTDATA_FORMAT_BYTES;
+  if (HAL_CRC_Init(&hcrc) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN CRC_Init 2 */
+
+  /* USER CODE END CRC_Init 2 */
+
+}
+
+/**
+  * @brief TIM7 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_TIM7_Init(void)
+{
+
+  /* USER CODE BEGIN TIM7_Init 0 */
+
+  /* USER CODE END TIM7_Init 0 */
+
+  TIM_MasterConfigTypeDef sMasterConfig = {0};
+
+  /* USER CODE BEGIN TIM7_Init 1 */
+
+  /* USER CODE END TIM7_Init 1 */
+  htim7.Instance = TIM7;
+  htim7.Init.Prescaler = 32;
+  htim7.Init.CounterMode = TIM_COUNTERMODE_UP;
+  htim7.Init.Period = 10000;
+  htim7.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_ENABLE;
+  if (HAL_TIM_Base_Init(&htim7) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  sMasterConfig.MasterOutputTrigger = TIM_TRGO_RESET;
+  sMasterConfig.MasterSlaveMode = TIM_MASTERSLAVEMODE_DISABLE;
+  if (HAL_TIMEx_MasterConfigSynchronization(&htim7, &sMasterConfig) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN TIM7_Init 2 */
+
+  /* USER CODE END TIM7_Init 2 */
+
+}
+
+/**
   * @brief TIM21 Initialization Function
   * @param None
   * @retval None
@@ -394,6 +498,41 @@ void MX_TIM22_Init(void)
 
 }
 
+/**
+  * @brief USART1 Initialization Function
+  * @param None
+  * @retval None
+  */
+static void MX_USART1_UART_Init(void)
+{
+
+  /* USER CODE BEGIN USART1_Init 0 */
+
+  /* USER CODE END USART1_Init 0 */
+
+  /* USER CODE BEGIN USART1_Init 1 */
+
+  /* USER CODE END USART1_Init 1 */
+  huart1.Instance = USART1;
+  huart1.Init.BaudRate = 115200;
+  huart1.Init.WordLength = UART_WORDLENGTH_8B;
+  huart1.Init.StopBits = UART_STOPBITS_1;
+  huart1.Init.Parity = UART_PARITY_NONE;
+  huart1.Init.Mode = UART_MODE_TX_RX;
+  huart1.Init.HwFlowCtl = UART_HWCONTROL_NONE;
+  huart1.Init.OverSampling = UART_OVERSAMPLING_16;
+  huart1.Init.OneBitSampling = UART_ONE_BIT_SAMPLE_DISABLE;
+  huart1.AdvancedInit.AdvFeatureInit = UART_ADVFEATURE_NO_INIT;
+  if (HAL_UART_Init(&huart1) != HAL_OK)
+  {
+    Error_Handler();
+  }
+  /* USER CODE BEGIN USART1_Init 2 */
+
+  /* USER CODE END USART1_Init 2 */
+
+}
+
 /** 
   * Enable DMA controller clock
   */
@@ -407,6 +546,9 @@ void MX_DMA_Init(void)
   /* DMA1_Channel1_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Channel1_IRQn, 3, 0);
   HAL_NVIC_EnableIRQ(DMA1_Channel1_IRQn);
+  /* DMA1_Channel2_3_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Channel2_3_IRQn, 3, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
 
 }
 
@@ -424,20 +566,26 @@ void MX_GPIO_Init(void)
   __HAL_RCC_GPIOB_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(SPI1_CS_GPIO_Port, SPI1_CS_Pin, GPIO_PIN_SET);
+  HAL_GPIO_WritePin(GPIOA, ON_OFF_Pin|RESET_Pin|VMON_CLK_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(LDO_OFF_GPIO_Port, LDO_OFF_Pin, GPIO_PIN_SET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(GPIOB, LED_CTRL_Pin|CHR_CTRL_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(VMON_CLK_GPIO_Port, VMON_CLK_Pin, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : SPI1_CS_Pin */
-  GPIO_InitStruct.Pin = SPI1_CS_Pin;
+  /*Configure GPIO pins : ON_OFF_Pin LDO_OFF_Pin RESET_Pin */
+  GPIO_InitStruct.Pin = ON_OFF_Pin|LDO_OFF_Pin|RESET_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(SPI1_CS_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : LDO_OK_Pin STAT2_Pin STAT1_Pin */
+  GPIO_InitStruct.Pin = LDO_OK_Pin|STAT2_Pin|STAT1_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
   /*Configure GPIO pins : LED_CTRL_Pin CHR_CTRL_Pin */
   GPIO_InitStruct.Pin = LED_CTRL_Pin|CHR_CTRL_Pin;
@@ -459,15 +607,59 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(VMON_CLK_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : STAT2_Pin STAT1_Pin */
-  GPIO_InitStruct.Pin = STAT2_Pin|STAT1_Pin;
-  GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
-  GPIO_InitStruct.Pull = GPIO_PULLUP;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
-
 }
 
 /* USER CODE BEGIN 4 */
+void eeprom_ram_init(EEPROMStorageTypDef *eeprom)
+{
+	uint32_t crc;
+
+	/*Copy data from EEPROM*/
+	memcpy(eeprom, (uint32_t*)EEPROM_BASE_ADDRESS, sizeof(EEPROMStorageTypDef));
+
+	/*Calculate the CRC*/
+	crc = HAL_CRC_Calculate(&hcrc, (uint32_t *)eeprom, sizeof(EEPROMStorageTypDef)-sizeof(uint32_t));
+
+	/*Initialize defaults if CRC is wrong*/
+	if(crc != eeprom->crc)
+	{
+		eeprom->batt_full_mah = FULL_BATT_MAH;
+		eeprom->batt_full_mv = FULL_BATT_MV;
+		eeprom->batt_low_mv = BATT_LOW_MV;
+		eeprom->vin_hys_mv = eeprom_info.vin_hys_mv;
+		eeprom->vin_limit_mv = eeprom_info.vin_limit_mv;
+		eeprom->total_batt_ouput_ah = 0;
+	}
+	else
+	{
+		storage.total_batt_ouput_ah = eeprom->total_batt_ouput_ah;
+	}
+}
+
+void eeprom_save(EEPROMStorageTypDef *eeprom)
+{
+	uint32_t crc;
+
+	/*Calculate the CRC*/
+	crc = HAL_CRC_Calculate(&hcrc, (uint32_t *)eeprom, sizeof(EEPROMStorageTypDef)-sizeof(uint32_t));
+
+	if(eeprom->crc != crc)
+	{
+		eeprom->crc = crc;
+
+		/*Write to EEPROM*/
+		writeEEPROMData(0, (uint8_t*)eeprom, sizeof(EEPROMStorageTypDef));
+	}
+}
+
+void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
+{
+  if(huart->Instance == USART1)
+  {
+    /*Byte received, forward to AT parser*/
+    SCP_ByteReceived(aRxBuffer);
+  }
+}
 
 /* USER CODE END 4 */
 
@@ -481,11 +673,6 @@ void MX_GPIO_Init(void)
 void StartDefaultTask(void const * argument)
 {
   /* USER CODE BEGIN 5 */
-
-	uint32_t intensity_test = 0;
-
-	intensity_test = 2;
-	osMessagePut(ind_msg, intensity_test, osWaitForever);
   /* Infinite loop */
   for(;;)
   {
@@ -515,6 +702,11 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   {
 	  HAL_GPIO_TogglePin(VMON_CLK_GPIO_Port, VMON_CLK_Pin);
 	  osSignalSet (MonitorTaskHandle, 0x00000001);
+  }
+
+  if (htim->Instance == TIM7)
+  {
+	  SCP_Tick(10);
   }
 
   /* USER CODE END Callback 1 */
