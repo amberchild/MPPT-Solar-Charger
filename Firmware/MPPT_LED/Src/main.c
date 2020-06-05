@@ -131,6 +131,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   eeprom_ram_init(&eeprom_info);
+  eeprom_save(&eeprom_info);
 
   /*AT parser initialisation*/
  SCP_Init(uart_send_buff, uart_read_byte);
@@ -626,8 +627,8 @@ void eeprom_ram_init(EEPROMStorageTypDef *eeprom)
 		eeprom->batt_full_mah = FULL_BATT_MAH;
 		eeprom->batt_full_mv = FULL_BATT_MV;
 		eeprom->batt_low_mv = BATT_LOW_MV;
-		eeprom->vin_hys_mv = eeprom_info.vin_hys_mv;
-		eeprom->vin_limit_mv = eeprom_info.vin_limit_mv;
+		eeprom->vin_hys_mv = VINPUT_HYS;
+		eeprom->vin_limit_mv = VINPUT_LIMIT;
 		eeprom->total_batt_ouput_ah = 0;
 	}
 	else
@@ -700,7 +701,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   /* USER CODE BEGIN Callback 1 */
   if (htim->Instance == TIM21)
   {
-	  HAL_GPIO_TogglePin(VMON_CLK_GPIO_Port, VMON_CLK_Pin);
 	  osSignalSet (MonitorTaskHandle, 0x00000001);
   }
 

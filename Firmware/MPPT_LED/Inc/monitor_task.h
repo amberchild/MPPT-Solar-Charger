@@ -12,8 +12,8 @@
 #include "cmsis_os.h"
 
 #define MPPT_MV			17500
-#define VINPUT_LIMIT	8000
-#define VINPUT_HYS		1000
+#define VINPUT_LIMIT	13300
+#define VINPUT_HYS		5000
 #define VINPUT_CONST	7.371
 #define FULL_BATT_MV	12600
 #define FULL_BATT_MAH	12800
@@ -26,8 +26,9 @@
 #define DRIVER_EFF		0.85
 #define HOURS_24		86400
 #define IDLE_CURR_MA	20
-#define IDLE_CURR_MAH	120
-#define MIN_DAY_DUR		3600
+#define IDLE_CURR_MAH	200
+#define MIN_DAY_DUR		18000
+#define TIME_INTEG		6000
 
 extern osThreadId MonitorTaskHandle;
 extern DevStorageTypDef storage;

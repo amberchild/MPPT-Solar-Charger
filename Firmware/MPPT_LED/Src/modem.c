@@ -779,7 +779,7 @@ static _Bool TelitPortalPostData(void)
             modem_data.imei,
 			(int)storage.energy_stored_mah,
 			(int)storage.energy_released_mah,
-			(int)storage.daylength_s,
+			(int)modem_data.day_lenght_store,
 			(int)storage.total_batt_ouput_ah,
 			(int)storage.vbatt_mv
               );
@@ -805,7 +805,7 @@ static _Bool TelitPortalPostData(void)
     strcat(post_buff,local_buff);
     
     memset(local_buff, 0, sizeof(local_buff));
-    sprintf((char *)local_buff, fcmd_dw_post_p3, modem_data.imei, (int)storage.daylength_s);
+    sprintf((char *)local_buff, fcmd_dw_post_p3, modem_data.imei, (int)modem_data.day_lenght_store);
     strcat(post_buff,local_buff);
     
     memset(local_buff, 0, sizeof(local_buff));

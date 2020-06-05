@@ -1,2 +1,2 @@
-eeprom.c:16:19:writeEEPROMByte	32	static
-eeprom.c:25:19:writeEEPROMData	40	static
+eeprom.c:16:19:writeEEPROMByte	16	static
+eeprom.c:25:19:writeEEPROMData	24	static

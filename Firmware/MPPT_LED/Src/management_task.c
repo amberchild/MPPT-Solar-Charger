@@ -20,17 +20,18 @@ void ManagementTask(void const * argument)
 	static _Bool battery_charged = 0;
 	static _Bool discharge_lock = 0;
 	static int32_t max_idle_current = 0;
-	storage.total_batt_ouput_ah = eeprom_info.total_batt_ouput_ah;
+	uint8_t i;
+	upload_error_t sts = UPLOAD_OK;
 
 	for(;;)
 	{
 		osDelay(1000);
 
 		/*Check if it is a day time*/
-		if(storage.vinput_mv+eeprom_info.vin_hys_mv > eeprom_info.vin_limit_mv)
+		if(storage.daytime_flag)
 		{
 			/*If input is more than MPPT, enable charger*/
-			if(storage.vinput_mv+eeprom_info.vin_hys_mv > MPPT_MV)
+			if(storage.vinput_mv+100 > MPPT_MV)
 			{
 				charger_enable();
 				osDelay(5000);
@@ -54,15 +55,11 @@ void ManagementTask(void const * argument)
 				else
 				{
 					osMessagePut(ind_msg, IND_OFF, osWaitForever);
-					if(storage.vbatt_mv < FULL_BATT_MV)
-					{
-						battery_charged = 0;
-					}
 				}
 
 			}
 			/*If input is less than MPPT, disable charger*/
-			else if(storage.vinput_mv-eeprom_info.vin_hys_mv < MPPT_MV)
+			else if(storage.vinput_mv-100 < MPPT_MV)
 			{
 				charger_disable();
 				osMessagePut(ind_msg, IND_OFF, osWaitForever);
@@ -70,7 +67,7 @@ void ManagementTask(void const * argument)
 
 		}
 		/*Check if it is a night time*/
-		else if(storage.vinput_mv-eeprom_info.vin_hys_mv < eeprom_info.vin_limit_mv)
+		else
 		{
 			charger_disable();
 			osMessagePut(ind_msg, IND_OFF, osWaitForever);
@@ -78,25 +75,23 @@ void ManagementTask(void const * argument)
 
 			if(!discharge_lock)
 			{
-				/*Load the battery with LEDs*/
-				if(battery_charged)
-				{
-					load_setup(FULL_BATT_MAH, HOURS_24 - storage.daylength_s);
-					storage.energy_released_mah = 0;
-				}
 				/*Fully load the battery if charging time is too short */
-				else if(storage.daylength_s < MIN_DAY_DUR)
+				if(storage.daylength_s < MIN_DAY_DUR)
 				{
-					load_setup(FULL_BATT_MAH, 0);
-					storage.energy_released_mah = 0;
+					storage.led_level = load_setup(FULL_BATT_MAH, 0);
+				}
+				/*Load the battery with LEDs*/
+				else if(battery_charged)
+				{
+					storage.led_level = load_setup(FULL_BATT_MAH, HOURS_24 - storage.daylength_s);
 				}
 				else
 				{
-					storage.energy_stored_mah = storage.energy_stored_mah - storage.energy_released_mah;
+					storage.energy_stored_mah -= storage.energy_released_mah;
 					storage.energy_released_mah = 0;
 					if(storage.energy_stored_mah > 0)
 					{
-						load_setup(storage.energy_stored_mah, HOURS_24 - storage.daylength_s);
+						storage.led_level = load_setup(storage.energy_stored_mah, HOURS_24 - storage.daylength_s);
 					}
 					else
 					{
@@ -106,12 +101,13 @@ void ManagementTask(void const * argument)
 
 				/*Discharge battery with LEDs*/
 				osMessagePut(ind_msg, IND_RED, osWaitForever);
+				modem_data.day_lenght_store = storage.daylength_s;
 				while(1)
 				{
 					osDelay(1000);
 
 					/*Day time?*/
-					if(storage.vinput_mv+eeprom_info.vin_hys_mv > eeprom_info.vin_limit_mv)
+					if(storage.daytime_flag)
 					{
 						break;
 					}
@@ -126,7 +122,7 @@ void ManagementTask(void const * argument)
 					/*Out of energy check*/
 					if(battery_charged)
 					{
-						if(eeprom_info.batt_full_mah - storage.energy_released_mah < 0)
+						if(eeprom_info.batt_full_mah - storage.energy_released_mah <= 0)
 						{
 							discharge_lock = 1;
 							break;
@@ -136,7 +132,7 @@ void ManagementTask(void const * argument)
 					{
 						if(storage.daylength_s > MIN_DAY_DUR)
 						{
-							if(storage.energy_stored_mah - storage.energy_released_mah < 0)
+							if(storage.energy_stored_mah - storage.energy_released_mah <= 0)
 							{
 								discharge_lock = 1;
 								break;
@@ -149,13 +145,22 @@ void ManagementTask(void const * argument)
 				osMessagePut(led_msg, 0, osWaitForever);
 				osMessagePut(ind_msg, IND_OFF, osWaitForever);
 				eeprom_info.total_batt_ouput_ah = storage.total_batt_ouput_ah;
+				eeprom_save(&eeprom_info);
+				for(i = 0; i < 5; i++)
+				{
+					sts = TelitCloudUpload();
+					if(sts == UPLOAD_OK)
+					{break;}
+					if(sts == MODEM_NO_OPERATOR_PRESENT)
+					{break;}
+				}
 				battery_charged = 0;
 				storage.daylength_s = 0;
 				storage.energy_stored_mah = storage.energy_stored_mah - storage.energy_released_mah;
 				if(storage.energy_stored_mah < 0)
 				{storage.energy_stored_mah = 0;}
-				eeprom_save(&eeprom_info);
-				//TelitCloudUpload();
+				storage.energy_released_mah = 0;
+
 			}
 		}
 
@@ -245,5 +250,5 @@ uint32_t load_setup(uint32_t capacity, uint32_t nightitme)
 		}
 	}
 
-	return intensity;
+	return intensity-1;
 }

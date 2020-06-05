@@ -49,8 +49,8 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  ../Inc/led_control_task.h ../Inc/monitor_task.h ../Inc/main.h \
- ../Inc/indication_task.h ../Inc/management_task.h ../Inc/eeprom.h \
- ../Inc/modem.h ../Inc/StringCommandParser.h
+ ../Inc/indication_task.h ../Inc/management_task.h ../Inc/modem.h \
+ ../Inc/eeprom.h ../Inc/modem.h ../Inc/StringCommandParser.h
 
 ../Inc/main.h:
 
@@ -161,6 +161,8 @@ Src/main.o: ../Src/main.c ../Inc/main.h \
 ../Inc/indication_task.h:
 
 ../Inc/management_task.h:
+
+../Inc/modem.h:
 
 ../Inc/eeprom.h:
 

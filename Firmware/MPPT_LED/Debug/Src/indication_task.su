@@ -1,4 +1,4 @@
-indication_task.c:19:6:IndicationTask	40	static
-indication_task.c:56:6:ind_green	32	static
-indication_task.c:71:6:ind_red	32	static
+indication_task.c:56:6:ind_green	40	static
+indication_task.c:71:6:ind_red	40	static
 indication_task.c:86:6:ind_off	32	static
+indication_task.c:19:6:IndicationTask	24	static

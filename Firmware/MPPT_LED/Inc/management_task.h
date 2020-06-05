@@ -10,9 +10,11 @@
 
 #include "main.h"
 #include "cmsis_os.h"
+#include "modem.h"
 
 extern EEPROMStorageTypDef eeprom_info;
 extern osThreadId ManagementTaskHandle;
+extern modem_data_storage_t modem_data;
 
 typedef enum
 {

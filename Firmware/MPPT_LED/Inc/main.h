@@ -53,6 +53,8 @@ typedef struct
 	float energy_released_mah;
 	float total_batt_ouput_ah;
 	uint32_t daylength_s;
+	uint8_t led_level;
+	_Bool daytime_flag;
 
 }DevStorageTypDef;
 

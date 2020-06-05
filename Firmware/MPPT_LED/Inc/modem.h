@@ -31,6 +31,7 @@ typedef struct
     char ip_address[16];
     char device_name[21];
     char fw_version[16];
+    uint32_t day_lenght_store;
 } modem_data_storage_t;
 
 typedef enum upload_errors
@@ -39,11 +40,11 @@ typedef enum upload_errors
   MODEM_POWER_ON_FAIL,
   MODEM_POWER_OFF_FAIL,
   MODEM_CMD_NO_RESPONSE,
+  CLOUD_AUTH_ERROR,
   MODEM_NET_SELECT_FAIL,
   MODEM_NO_OPERATOR_PRESENT,
   MODEM_NO_NETWORK,
   MODEM_NO_DATA_SERVICE,
-  CLOUD_AUTH_ERROR
     
 } upload_error_t;
 

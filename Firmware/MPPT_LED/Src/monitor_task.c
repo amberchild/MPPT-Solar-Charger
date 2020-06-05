@@ -19,6 +19,8 @@ void MonitorTask(void const * argument)
   osEvent evt;
   uint16_t  local_adc_data[5];
   static uint32_t mon_dayticks = 0;
+  static uint32_t daytime_counter= 0;
+  static uint32_t nighttime_counter= 0;
 
   /*Start ADC DMA Process*/
   if(HAL_ADC_Start_DMA(&hadc, (uint32_t *)storage.adc_data, 5) != HAL_OK)
@@ -70,8 +72,30 @@ void MonitorTask(void const * argument)
 		  /*Convert&Store Total Battery Energy Output*/
 		  storage.total_batt_ouput_ah += (float)((storage.coutput_ma * ETIME_CONST)/1000);
 
-		  /*Do the day length time tracking*/
-		  if(storage.vinput_mv+eeprom_info.vin_hys_mv > eeprom_info.vin_limit_mv)
+		  /*Day time monitoring*/
+		  if((int)(storage.vinput_mv+eeprom_info.vin_hys_mv) > eeprom_info.vin_limit_mv)
+		  {
+			  daytime_counter++;
+			  nighttime_counter= 0;
+		  }
+		  else if((int)(storage.vinput_mv-eeprom_info.vin_hys_mv) < eeprom_info.vin_limit_mv)
+		  {
+			  daytime_counter= 0;
+			  nighttime_counter++;
+		  }
+		  if(daytime_counter > TIME_INTEG)
+		  {
+			  storage.daytime_flag = 1;
+			  daytime_counter= 0;
+		  }
+		  if(nighttime_counter > TIME_INTEG)
+		  {
+			  storage.daytime_flag = 0;
+			  nighttime_counter= 0;
+		  }
+
+		  /*Do the day length time calculation*/
+		  if(storage.daytime_flag)
 		  {
 			  mon_dayticks++;
 			  storage.daylength_s = (uint32_t)(mon_dayticks/10);

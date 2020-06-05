@@ -48,8 +48,8 @@ Src/management_task.o: ../Src/management_task.c ../Inc/management_task.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h \
  ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
- ../Inc/led_control_task.h ../Inc/monitor_task.h ../Inc/indication_task.h \
- ../Inc/modem.h ../Inc/StringCommandParser.h
+ ../Inc/modem.h ../Inc/led_control_task.h ../Inc/monitor_task.h \
+ ../Inc/indication_task.h ../Inc/modem.h ../Inc/StringCommandParser.h
 
 ../Inc/management_task.h:
 
@@ -152,6 +152,8 @@ Src/management_task.o: ../Src/management_task.c ../Inc/management_task.h \
 ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h:
 
 ../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h:
+
+../Inc/modem.h:
 
 ../Inc/led_control_task.h:
 
