@@ -37,6 +37,8 @@ void ManagementTask(void const * argument)
 				osDelay(5000);
 				ch_status = charger_status();
 
+				/*Stay in here until fully charged or day is over:*/
+				/*the charger should always indicate charge process termination*/
 				while(ch_status == IN_PROGRESS)
 				{
 					osDelay(1000);
@@ -44,13 +46,17 @@ void ManagementTask(void const * argument)
 					battery_charged = 0;
 					osMessagePut(ind_msg, IND_RED, osWaitForever);
 					ch_status = charger_status();
+					if(!storage.daytime_flag)/*Fail-safe*/
+					{break;}
 				}
 
+				/*If battery is full, then it must have it's declared capacity (assumption)*/
 				if(ch_status == COMPLETED)
 				{
 					battery_charged = 1;
 					discharge_lock = 0;
 					osMessagePut(ind_msg, IND_GREEN, osWaitForever);
+					storage.energy_stored_mah = FULL_BATT_MAH;
 				}
 				else
 				{
@@ -66,7 +72,7 @@ void ManagementTask(void const * argument)
 			}
 
 		}
-		/*Check if it is a night time*/
+		/*It must be a night time*/
 		else
 		{
 			charger_disable();
