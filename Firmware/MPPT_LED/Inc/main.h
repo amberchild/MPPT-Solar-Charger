@@ -51,7 +51,7 @@ typedef struct
 	int32_t coutput_ma;
 	float energy_stored_mah;
 	float energy_released_mah;
-	float total_batt_ouput_ah;
+	double total_batt_ouput_ah;
 	uint32_t daylength_s;
 	uint8_t led_level;
 	_Bool daytime_flag;
@@ -60,7 +60,7 @@ typedef struct
 
 typedef struct
 {
-	float total_batt_ouput_ah;
+	double total_batt_ouput_ah;
 	uint16_t vin_limit_mv;
 	uint16_t vin_hys_mv;
 	uint16_t batt_full_mv;

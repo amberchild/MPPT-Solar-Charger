@@ -238,8 +238,8 @@ uint32_t load_setup(uint32_t capacity, uint32_t nightitme)
 	uint32_t intensity;
 	uint32_t mAseconds;
 
-	/*Decrease capacity to have more realistic results*/
-	capacity = capacity * DRIVER_EFF;
+	/*Battery balancer decreases the capacity measurements?*/
+	capacity = capacity * BATT_EFF;
 
 	/*Convert capacity to mAs*/
 	mAseconds = capacity*3600;

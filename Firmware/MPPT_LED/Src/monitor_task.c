@@ -70,7 +70,7 @@ void MonitorTask(void const * argument)
 		  {storage.energy_released_mah = FULL_BATT_MAH;}
 
 		  /*Convert&Store Total Battery Energy Output*/
-		  storage.total_batt_ouput_ah += (float)((storage.coutput_ma * ETIME_CONST)/1000);
+		  storage.total_batt_ouput_ah += (double)(storage.coutput_ma * ETIME_CONST/1000);
 
 		  /*Day time monitoring*/
 		  if((int)(storage.vinput_mv+eeprom_info.vin_hys_mv) > eeprom_info.vin_limit_mv)
