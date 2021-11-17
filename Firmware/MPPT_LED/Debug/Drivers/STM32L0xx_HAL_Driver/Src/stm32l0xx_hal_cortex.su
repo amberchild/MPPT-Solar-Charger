@@ -1,6 +1,6 @@
 stm32l0xx_hal_cortex.c:132:6:HAL_NVIC_SetPriority	16	static
 stm32l0xx_hal_cortex.c:148:6:HAL_NVIC_EnableIRQ	0	static
-stm32l0xx_hal_cortex.c:164:6:HAL_NVIC_DisableIRQ	0	static
+stm32l0xx_hal_cortex.c:164:6:HAL_NVIC_DisableIRQ	0	static,ignoring_inline_asm
 stm32l0xx_hal_cortex.c:177:6:HAL_NVIC_SystemReset	0	static,ignoring_inline_asm
 stm32l0xx_hal_cortex.c:190:10:HAL_SYSTICK_Config	0	static
 stm32l0xx_hal_cortex.c:222:10:HAL_NVIC_GetPriority	0	static

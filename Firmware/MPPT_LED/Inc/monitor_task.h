@@ -23,7 +23,6 @@
 #define CSENSE_CONST	1.943
 #define COFFSET_CONST	65
 #define ETIME_CONST		0.0000277778
-#define BATT_EFF		0.7
 #define HOURS_24		86400
 #define IDLE_CURR_MA	20
 #define IDLE_CURR_MAH	200
@@ -32,6 +31,7 @@
 
 extern osThreadId MonitorTaskHandle;
 extern DevStorageTypDef storage;
+//extern IWDG_HandleTypeDef hiwdg;
 
 void MonitorTask(void const * argument);
 

@@ -45,7 +45,7 @@ void delay_us (uint16_t us)
 void set_intensity(uint32_t ref)
 {
   unsigned char byte = 0, j = 0, k = 0;
-  byte = 0x72;       //device adress byte
+  byte = 0x72;       //device address byte
 
   /*Shut down driver and enter into EasyScale control mode*/
   HAL_GPIO_WritePin(LED_CTRL_GPIO_Port, LED_CTRL_Pin, GPIO_PIN_SET);

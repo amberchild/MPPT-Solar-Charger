@@ -101,8 +101,8 @@ void eeprom_save(EEPROMStorageTypDef *eeprom);
 #define VBAT_GPIO_Port GPIOA
 #define VAUX_Pin GPIO_PIN_4
 #define VAUX_GPIO_Port GPIOA
-#define ON_OFF_Pin GPIO_PIN_5
-#define ON_OFF_GPIO_Port GPIOA
+#define WAKE_Pin GPIO_PIN_5
+#define WAKE_GPIO_Port GPIOA
 #define LDO_OFF_Pin GPIO_PIN_6
 #define LDO_OFF_GPIO_Port GPIOA
 #define RESET_Pin GPIO_PIN_7
@@ -121,6 +121,11 @@ void eeprom_save(EEPROMStorageTypDef *eeprom);
 #define STAT2_GPIO_Port GPIOB
 #define STAT1_Pin GPIO_PIN_5
 #define STAT1_GPIO_Port GPIOB
+void   MX_GPIO_Init(void);
+void   MX_DMA_Init(void);
+void   MX_ADC_Init(void);
+void   MX_TIM22_Init(void);
+void   MX_TIM21_Init(void);
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

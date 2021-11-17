@@ -81,7 +81,7 @@ void ManagementTask(void const * argument)
 
 			if(!discharge_lock)
 			{
-				/*Fully load the battery if charging time is too short */
+				/*Fully load the battery if daytime was too short */
 				if(storage.daylength_s < MIN_DAY_DUR)
 				{
 					storage.led_level = load_setup(FULL_BATT_MAH, 0);
@@ -237,9 +237,17 @@ uint32_t load_setup(uint32_t capacity, uint32_t nightitme)
 {
 	uint32_t intensity;
 	uint32_t mAseconds;
+	float capfix;
 
-	/*Battery balancer decreases the capacity measurements?*/
-	capacity = capacity * BATT_EFF;
+	/*BMS decreases the capacity?*/
+	capfix = (1.2037 * capacity) - 2633.9;
+	capacity = (uint32_t)capfix;
+	if(capfix  < 0)
+	{
+		intensity = 0;
+		osMessagePut(led_msg, intensity, osWaitForever);
+		return intensity;
+	}
 
 	/*Convert capacity to mAs*/
 	mAseconds = capacity*3600;
@@ -252,9 +260,9 @@ uint32_t load_setup(uint32_t capacity, uint32_t nightitme)
 		if(storage.coutput_ma*nightitme > mAseconds)
 		{
 			osMessagePut(led_msg, intensity-1, osWaitForever);
-			return intensity;
+			return intensity-1;
 		}
 	}
 
-	return intensity-1;
+	return intensity;
 }

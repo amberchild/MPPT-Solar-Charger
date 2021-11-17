@@ -105,16 +105,16 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
   /* USER CODE END ADC1_MspInit 0 */
     /* Peripheral clock enable */
     __HAL_RCC_ADC1_CLK_ENABLE();
-  
+
     __HAL_RCC_GPIOA_CLK_ENABLE();
-    /**ADC GPIO Configuration    
+    /**ADC GPIO Configuration
     PA0     ------> ADC_IN0
     PA1     ------> ADC_IN1
     PA2     ------> ADC_IN2
     PA3     ------> ADC_IN3
-    PA4     ------> ADC_IN4 
+    PA4     ------> ADC_IN4
     */
-    GPIO_InitStruct.Pin = ISENS1_Pin|ISENS2_Pin|VINPUT_Pin|VBAT_Pin 
+    GPIO_InitStruct.Pin = ISENS1_Pin|ISENS2_Pin|VINPUT_Pin|VBAT_Pin
                           |VAUX_Pin;
     GPIO_InitStruct.Mode = GPIO_MODE_ANALOG;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -163,15 +163,15 @@ void HAL_ADC_MspDeInit(ADC_HandleTypeDef* hadc)
   /* USER CODE END ADC1_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_ADC1_CLK_DISABLE();
-  
-    /**ADC GPIO Configuration    
+
+    /**ADC GPIO Configuration
     PA0     ------> ADC_IN0
     PA1     ------> ADC_IN1
     PA2     ------> ADC_IN2
     PA3     ------> ADC_IN3
-    PA4     ------> ADC_IN4 
+    PA4     ------> ADC_IN4
     */
-    HAL_GPIO_DeInit(GPIOA, ISENS1_Pin|ISENS2_Pin|VINPUT_Pin|VBAT_Pin 
+    HAL_GPIO_DeInit(GPIOA, ISENS1_Pin|ISENS2_Pin|VINPUT_Pin|VBAT_Pin
                           |VAUX_Pin);
 
     /* ADC1 DMA DeInit */
@@ -343,11 +343,11 @@ void HAL_UART_MspInit(UART_HandleTypeDef* huart)
   /* USER CODE END USART1_MspInit 0 */
     /* Peripheral clock enable */
     __HAL_RCC_USART1_CLK_ENABLE();
-  
+
     __HAL_RCC_GPIOB_CLK_ENABLE();
-    /**USART1 GPIO Configuration    
+    /**USART1 GPIO Configuration
     PB6     ------> USART1_TX
-    PB7     ------> USART1_RX 
+    PB7     ------> USART1_RX
     */
     GPIO_InitStruct.Pin = GPIO_PIN_6|GPIO_PIN_7;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
@@ -416,10 +416,10 @@ void HAL_UART_MspDeInit(UART_HandleTypeDef* huart)
   /* USER CODE END USART1_MspDeInit 0 */
     /* Peripheral clock disable */
     __HAL_RCC_USART1_CLK_DISABLE();
-  
-    /**USART1 GPIO Configuration    
+
+    /**USART1 GPIO Configuration
     PB6     ------> USART1_TX
-    PB7     ------> USART1_RX 
+    PB7     ------> USART1_RX
     */
     HAL_GPIO_DeInit(GPIOB, GPIO_PIN_6|GPIO_PIN_7);
 

@@ -10,6 +10,7 @@
 #include "stdio.h"
 #include "string.h"
 
+extern IWDG_HandleTypeDef hiwdg;
 extern EEPROMStorageTypDef eeprom_info;
 osThreadId MonitorTaskHandle;
 DevStorageTypDef storage;
@@ -37,6 +38,9 @@ void MonitorTask(void const * argument)
 	  evt = osSignalWait (0x00000001, osWaitForever);
 	  if (evt.status == osEventSignal)
 	  {
+		  /*Feed the watch dog timer*/
+		  HAL_IWDG_Refresh(&hiwdg);
+
 		  /*Copy all ADC data measured with DMA*/
 		  memcpy(local_adc_data, storage.adc_data, sizeof(storage.adc_data));
 

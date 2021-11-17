@@ -6,7 +6,7 @@ StringCommandParser.c:109:6:SCP_GetBuff	16	static
 StringCommandParser.c:133:14:SCP_CheckCommand	24	static
 StringCommandParser.c:89:6:SCP_Process	16	static
 StringCommandParser.c:178:9:SCP_SendCommandWaitAnswer	32	static
-StringCommandParser.c:201:9:SCP_SendDoubleCommandWaitAnswer	40	static
+StringCommandParser.c:201:9:SCP_SendDoubleCommandWaitAnswer	48	static
 StringCommandParser.c:247:7:SCP_InitRx	8	static
 StringCommandParser.c:25:6:SCP_ByteReceived	8	static
 StringCommandParser.c:253:7:SCP_SendData	8	static

@@ -15,15 +15,15 @@
 #define false				0
 #define CMD_BUFF_LENGTH                 1024
 #define SESSIONID_LENGTH                24
-#define PWRONLVL                        2100    //power on indication ADC value
+#define PWRONLVL                        3500    //power on indication ADC value
 #define WAIT_FOR_NETWORK_S              900     //wait for network in seconds
 #define ADC_VOLTAGE_COEFF               1.611328
 
 typedef struct
 {
-    _Bool   lte_pwr_status;
+    _Bool   modem_power_en;
     int network_status;
-    int lte_status;
+    int context;
     int socket_id;
     int signal;
     char operator[17];
@@ -41,9 +41,12 @@ typedef enum upload_errors
   MODEM_POWER_OFF_FAIL,
   MODEM_CMD_NO_RESPONSE,
   CLOUD_AUTH_ERROR,
+  CLOUD_POST_ERROR,
+  CLOUD_OPEN_SOCKET_ERROR,
   MODEM_NET_SELECT_FAIL,
   MODEM_NO_OPERATOR_PRESENT,
   MODEM_NO_NETWORK,
+  MODEM_NOT_REGISTERED,
   MODEM_NO_DATA_SERVICE,
     
 } upload_error_t;
