@@ -60,7 +60,12 @@ void ManagementTask(void const * argument)
 				}
 				else
 				{
+					osMessagePut(ind_msg, IND_RED, osWaitForever);
+					charger_disable();
+					osDelay(5000);
 					osMessagePut(ind_msg, IND_OFF, osWaitForever);
+					charger_enable();
+					osDelay(5000);
 				}
 
 			}
