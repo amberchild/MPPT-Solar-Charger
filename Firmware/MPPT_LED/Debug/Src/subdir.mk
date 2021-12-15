@@ -60,3 +60,10 @@ C_DEPS += \
 Src/%.o: ../Src/%.c Src/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L072xx -DDEBUG -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@"  -mfloat-abi=soft -mthumb -o "$@"
 
+clean: clean-Src
+
+clean-Src:
+	-$(RM) ./Src/StringCommandParser.d ./Src/StringCommandParser.o ./Src/eeprom.d ./Src/eeprom.o ./Src/freertos.d ./Src/freertos.o ./Src/indication_task.d ./Src/indication_task.o ./Src/led_control_task.d ./Src/led_control_task.o ./Src/main.d ./Src/main.o ./Src/management_task.d ./Src/management_task.o ./Src/modem.d ./Src/modem.o ./Src/monitor_task.d ./Src/monitor_task.o ./Src/stm32l0xx_hal_msp.d ./Src/stm32l0xx_hal_msp.o ./Src/stm32l0xx_hal_timebase_tim.d ./Src/stm32l0xx_hal_timebase_tim.o ./Src/stm32l0xx_it.d ./Src/stm32l0xx_it.o ./Src/syscalls.d ./Src/syscalls.o ./Src/sysmem.d ./Src/sysmem.o ./Src/system_stm32l0xx.d ./Src/system_stm32l0xx.o
+
+.PHONY: clean-Src
+

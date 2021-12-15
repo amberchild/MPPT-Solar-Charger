@@ -16,7 +16,6 @@ RM := rm -rf
 -include Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/subdir.mk
 -include Middlewares/Third_Party/FreeRTOS/Source/subdir.mk
 -include Drivers/STM32L0xx_HAL_Driver/Src/subdir.mk
--include subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -65,8 +64,8 @@ all: main-build
 main-build: MPPT_LED.elf secondary-outputs
 
 # Tool invocations
-MPPT_LED.elf: $(OBJS) $(USER_OBJS) C:\Users\Fujitsu\STM32CubeIDE\workspace_1.4.0\MPPT_LED\STM32L072KZTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "MPPT_LED.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\Fujitsu\STM32CubeIDE\workspace_1.4.0\MPPT_LED\STM32L072KZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPPT_LED.map" -Wl,--gc-sections -static  -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
+MPPT_LED.elf: $(OBJS) $(USER_OBJS) C:\Users\ginta\STM32CubeIDE\workspace\MPPT_LED\STM32L072KZTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "MPPT_LED.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\ginta\STM32CubeIDE\workspace\MPPT_LED\STM32L072KZTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="MPPT_LED.map" -Wl,--gc-sections -static  -mfloat-abi=soft -mthumb -u _printf_float -u _scanf_float -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -87,7 +86,7 @@ MPPT_LED.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 
 # Other Targets
 clean:
-	-$(RM) $(SIZE_OUTPUT)$(OBJDUMP_LIST)$(EXECUTABLES)$(OBJS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(OBJCOPY_BIN) MPPT_LED.elf
+	-$(RM) MPPT_LED.bin MPPT_LED.elf MPPT_LED.list default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
@@ -99,6 +98,6 @@ fail-specified-linker-script-missing:
 warn-no-linker-script-specified:
 	@echo 'Warning: No linker script specified. Check the linker settings in the build configuration.'
 
-.PHONY: all clean dependents fail-specified-linker-script-missing warn-no-linker-script-specified
+.PHONY: all clean dependents main-build fail-specified-linker-script-missing warn-no-linker-script-specified
 
 -include ../makefile.targets

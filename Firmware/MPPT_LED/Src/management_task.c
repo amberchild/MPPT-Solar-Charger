@@ -60,6 +60,7 @@ void ManagementTask(void const * argument)
 				}
 				else
 				{
+					/*Undefined state. Restart the charger.*/
 					osMessagePut(ind_msg, IND_RED, osWaitForever);
 					charger_disable();
 					osDelay(5000);
@@ -86,10 +87,10 @@ void ManagementTask(void const * argument)
 
 			if(!discharge_lock)
 			{
-				/*Fully load the battery if daytime was too short */
+				/*DO NOT fully load the battery if daytime was too short */
 				if(storage.daylength_s < MIN_DAY_DUR)
 				{
-					storage.led_level = load_setup(FULL_BATT_MAH, 0);
+					storage.led_level = load_setup(HALF_BATT_MAH, HOURS_24);
 				}
 				/*Load the battery with LEDs*/
 				else if(battery_charged)
@@ -157,13 +158,16 @@ void ManagementTask(void const * argument)
 				osMessagePut(ind_msg, IND_OFF, osWaitForever);
 				eeprom_info.total_batt_ouput_ah = storage.total_batt_ouput_ah;
 				eeprom_save(&eeprom_info);
-				for(i = 0; i < 5; i++)
+				if(storage.vbatt_mv > BATT_LOW_MV - 500)
 				{
-					sts = TelitCloudUpload();
-					if(sts == UPLOAD_OK)
-					{break;}
-					if(sts == MODEM_NO_OPERATOR_PRESENT)
-					{break;}
+					for(i = 0; i < 5; i++)
+					{
+						sts = TelitCloudUpload();
+						if(sts == UPLOAD_OK)
+						{break;}
+						if(sts == MODEM_NO_OPERATOR_PRESENT)
+						{break;}
+					}
 				}
 				battery_charged = 0;
 				storage.daylength_s = 0;
@@ -245,7 +249,7 @@ uint32_t load_setup(uint32_t capacity, uint32_t nightitme)
 	float capfix;
 
 	/*BMS decreases the capacity?*/
-	capfix = (1.2037 * capacity) - 2633.9;
+	capfix = (1.16 * capacity) - 4000;
 	capacity = (uint32_t)capfix;
 	if(capfix  < 0)
 	{
