@@ -7,8 +7,8 @@ HeaderPath=Drivers\STM32L0xx_HAL_Driver\Inc;Drivers\STM32L0xx_HAL_Driver\Inc\Leg
 CDefines=USE_HAL_DRIVER;STM32L072xx;USE_HAL_DRIVER;USE_HAL_DRIVER;
 
 [PreviousGenFiles]
-HeaderPath=C:/Users/ginta/STM32CubeIDE/workspace/MPPT_LED/Inc
+HeaderPath=C:/Users/gdr/workspace/MPPT_LED/Inc
 HeaderFiles=FreeRTOSConfig.h;stm32l0xx_it.h;stm32l0xx_hal_conf.h;main.h;
-SourcePath=C:/Users/ginta/STM32CubeIDE/workspace/MPPT_LED/Src
+SourcePath=C:/Users/gdr/workspace/MPPT_LED/Src
 SourceFiles=freertos.c;stm32l0xx_it.c;stm32l0xx_hal_msp.c;stm32l0xx_hal_timebase_tim.c;main.c;
 

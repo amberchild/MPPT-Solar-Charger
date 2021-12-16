@@ -37,7 +37,7 @@ void ManagementTask(void const * argument)
 				osDelay(5000);
 				ch_status = charger_status();
 
-				/*Stay in here until fully charged or day is over:*/
+				/*Stay in here until fully charged or the day is over:*/
 				/*the charger should always indicate charge process termination*/
 				while(ch_status == IN_PROGRESS)
 				{
@@ -124,32 +124,11 @@ void ManagementTask(void const * argument)
 						break;
 					}
 
-					/*Low battery?*/
+					/*Low battery voltage?*/
 					if(storage.vbatt_mv < BATT_LOW_MV)
 					{
 						discharge_lock = 1;
 						break;
-					}
-
-					/*Out of energy check*/
-					if(battery_charged)
-					{
-						if(eeprom_info.batt_full_mah - storage.energy_released_mah <= 0)
-						{
-							discharge_lock = 1;
-							break;
-						}
-					}
-					else
-					{
-						if(storage.daylength_s > MIN_DAY_DUR)
-						{
-							if(storage.energy_stored_mah - storage.energy_released_mah <= 0)
-							{
-								discharge_lock = 1;
-								break;
-							}
-						}
 					}
 				}
 
@@ -171,11 +150,8 @@ void ManagementTask(void const * argument)
 				}
 				battery_charged = 0;
 				storage.daylength_s = 0;
-				storage.energy_stored_mah = storage.energy_stored_mah - storage.energy_released_mah;
-				if(storage.energy_stored_mah < 0)
-				{storage.energy_stored_mah = 0;}
+				storage.energy_stored_mah = 0;
 				storage.energy_released_mah = 0;
-
 			}
 		}
 
@@ -249,7 +225,9 @@ uint32_t load_setup(uint32_t capacity, uint32_t nightitme)
 	float capfix;
 
 	/*BMS decreases the capacity?*/
-	capfix = (1.16 * capacity) - 4000;
+	//capfix = (COEFF_K * capacity) - COEFF_B;
+
+	capfix = 0.70 * capacity;
 	capacity = (uint32_t)capfix;
 	if(capfix  < 0)
 	{

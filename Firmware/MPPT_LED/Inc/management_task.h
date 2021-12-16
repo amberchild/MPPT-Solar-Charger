@@ -12,6 +12,9 @@
 #include "cmsis_os.h"
 #include "modem.h"
 
+#define COEFF_K			1.16
+#define COEFF_B			4000
+
 extern EEPROMStorageTypDef eeprom_info;
 extern osThreadId ManagementTaskHandle;
 extern modem_data_storage_t modem_data;
