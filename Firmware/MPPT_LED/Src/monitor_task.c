@@ -29,6 +29,15 @@ void MonitorTask(void const * argument)
 	  Error_Handler();
   }
 
+  /*Day time flag initialization*/
+  osDelay(1000);
+  memcpy(local_adc_data, storage.adc_data, sizeof(storage.adc_data));
+  storage.vinput_mv = (uint32_t)(local_adc_data[2] * VINPUT_CONST);
+  if((int)(storage.vinput_mv+eeprom_info.vin_hys_mv) > eeprom_info.vin_limit_mv)
+  {storage.daytime_flag = 1;}
+  else
+  {storage.daytime_flag = 0;}
+
   /*Start timer*/
   HAL_TIM_Base_Start_IT(&htim21);
 
@@ -65,13 +74,13 @@ void MonitorTask(void const * argument)
 
 		  /*Convert&Store Energy Accumulated*/
 		  storage.energy_stored_mah += (float)(storage.cinput_ma * ETIME_CONST);
-		  if(storage.energy_stored_mah > FULL_BATT_MAH)
-		  {storage.energy_stored_mah = FULL_BATT_MAH;}
+		  if(storage.energy_stored_mah > eeprom_info.batt_full_mah)
+		  {storage.energy_stored_mah = eeprom_info.batt_full_mah;}
 
 		  /*Convert&Store Energy Released*/
 		  storage.energy_released_mah += (float)(storage.coutput_ma * ETIME_CONST);
-		  if(storage.energy_released_mah > FULL_BATT_MAH)
-		  {storage.energy_released_mah = FULL_BATT_MAH;}
+		  if(storage.energy_released_mah > eeprom_info.batt_full_mah)
+		  {storage.energy_released_mah = eeprom_info.batt_full_mah;}
 
 		  /*Convert&Store Total Battery Energy Output*/
 		  storage.total_batt_ouput_ah += (double)(storage.coutput_ma * ETIME_CONST/1000);

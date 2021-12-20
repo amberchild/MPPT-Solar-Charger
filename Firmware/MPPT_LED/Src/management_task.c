@@ -41,10 +41,12 @@ void ManagementTask(void const * argument)
 				/*the charger should always indicate charge process termination*/
 				while(ch_status == IN_PROGRESS)
 				{
-					osDelay(1000);
+					osDelay(500);
+					osMessagePut(ind_msg, IND_RED, osWaitForever);
+					osDelay(500);
+					osMessagePut(ind_msg, IND_GREEN, osWaitForever);
 					discharge_lock = 0;
 					battery_charged = 0;
-					osMessagePut(ind_msg, IND_RED, osWaitForever);
 					ch_status = charger_status();
 					if(!storage.daytime_flag)/*Fail-safe*/
 					{break;}
@@ -56,15 +58,20 @@ void ManagementTask(void const * argument)
 					battery_charged = 1;
 					discharge_lock = 0;
 					osMessagePut(ind_msg, IND_GREEN, osWaitForever);
-					storage.energy_stored_mah = FULL_BATT_MAH;
+					storage.energy_stored_mah = eeprom_info.batt_full_mah;
 				}
 				else
 				{
 					/*Undefined state. Restart the charger.*/
-					osMessagePut(ind_msg, IND_RED, osWaitForever);
 					charger_disable();
 					osDelay(5000);
-					osMessagePut(ind_msg, IND_OFF, osWaitForever);
+					for(i = 0; i < 4; i++)
+					{
+						osMessagePut(ind_msg, IND_RED, osWaitForever);
+						osDelay(100);
+						osMessagePut(ind_msg, IND_OFF, osWaitForever);
+						osDelay(100);
+					}
 					charger_enable();
 					osDelay(5000);
 				}
@@ -74,7 +81,20 @@ void ManagementTask(void const * argument)
 			else if(storage.vinput_mv-100 < MPPT_MV)
 			{
 				charger_disable();
-				osMessagePut(ind_msg, IND_OFF, osWaitForever);
+				if(battery_charged)
+				{
+					for(i = 0; i < 4; i++)
+					{
+						osMessagePut(ind_msg, IND_GREEN, osWaitForever);
+						osDelay(100);
+						osMessagePut(ind_msg, IND_OFF, osWaitForever);
+						osDelay(100);
+					}
+				}
+				else
+				{
+					osMessagePut(ind_msg, IND_OFF, osWaitForever);
+				}
 			}
 
 		}
@@ -90,12 +110,12 @@ void ManagementTask(void const * argument)
 				/*DO NOT fully load the battery if daytime was too short */
 				if(storage.daylength_s < MIN_DAY_DUR)
 				{
-					storage.led_level = load_setup(HALF_BATT_MAH, HOURS_24);
+					storage.led_level = load_setup(eeprom_info.batt_full_mah/2, HOURS_24);
 				}
 				/*Load the battery with LEDs*/
 				else if(battery_charged)
 				{
-					storage.led_level = load_setup(FULL_BATT_MAH, HOURS_24 - storage.daylength_s);
+					storage.led_level = load_setup(eeprom_info.batt_full_mah, HOURS_24 - storage.daylength_s);
 				}
 				else
 				{
@@ -108,15 +128,18 @@ void ManagementTask(void const * argument)
 					else
 					{
 						storage.energy_stored_mah = 0;
+						osMessagePut(led_msg, 0, osWaitForever);
 					}
 				}
 
 				/*Discharge battery with LEDs*/
-				osMessagePut(ind_msg, IND_RED, osWaitForever);
 				modem_data.day_lenght_store = storage.daylength_s;
 				while(1)
 				{
-					osDelay(1000);
+					osMessagePut(ind_msg, IND_RED, osWaitForever);
+					osDelay(500);
+					osMessagePut(ind_msg, IND_OFF, osWaitForever);
+					osDelay(500);
 
 					/*Day time?*/
 					if(storage.daytime_flag)

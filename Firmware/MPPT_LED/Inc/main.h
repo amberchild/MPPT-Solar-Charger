@@ -135,5 +135,3 @@ void   MX_TIM21_Init(void);
 #endif
 
 #endif /* __MAIN_H */
-
-/************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

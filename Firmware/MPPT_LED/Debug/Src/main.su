@@ -11,8 +11,8 @@ main.c:495:6:MX_TIM22_Init	40	static
 main.c:573:6:MX_DMA_Init	16	static
 main.c:594:6:MX_GPIO_Init	56	static
 main.c:647:6:eeprom_ram_init	8	static
-main.c:673:6:eeprom_save	8	static
 main.c:94:5:main	168	static
+main.c:673:6:eeprom_save	8	static
 main.c:689:6:HAL_UART_RxCpltCallback	8	static
 main.c:726:6:HAL_TIM_PeriodElapsedCallback	8	static
 main.c:752:6:Error_Handler	0	static
