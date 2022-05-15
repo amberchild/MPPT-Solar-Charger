@@ -73,12 +73,12 @@ void MonitorTask(void const * argument)
 		  {storage.coutput_ma = 0;}
 
 		  /*Convert&Store Energy Accumulated*/
-		  storage.energy_stored_mah += (float)(storage.cinput_ma * ETIME_CONST);
+		  storage.energy_stored_mah += (double)(storage.cinput_ma * ETIME_CONST);
 		  if(storage.energy_stored_mah > eeprom_info.batt_full_mah)
 		  {storage.energy_stored_mah = eeprom_info.batt_full_mah;}
 
 		  /*Convert&Store Energy Released*/
-		  storage.energy_released_mah += (float)(storage.coutput_ma * ETIME_CONST);
+		  storage.energy_released_mah += (double)(storage.coutput_ma * ETIME_CONST);
 		  if(storage.energy_released_mah > eeprom_info.batt_full_mah)
 		  {storage.energy_released_mah = eeprom_info.batt_full_mah;}
 

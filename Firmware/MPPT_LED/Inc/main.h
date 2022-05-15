@@ -49,8 +49,8 @@ typedef struct
 	uint32_t vard_input_mv;
 	int32_t cinput_ma;
 	int32_t coutput_ma;
-	float energy_stored_mah;
-	float energy_released_mah;
+	double energy_stored_mah;
+	double energy_released_mah;
 	double total_batt_ouput_ah;
 	uint32_t daylength_s;
 	uint8_t led_level;

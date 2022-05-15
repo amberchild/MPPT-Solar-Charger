@@ -1,1 +1,1 @@
-freertos.c:63:6:vApplicationGetIdleTaskMemory	0	static
+../Src/freertos.c:63:6:vApplicationGetIdleTaskMemory	0	static

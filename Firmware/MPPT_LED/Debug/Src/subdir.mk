@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (9-2020-q2-update)
+# Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
@@ -57,13 +57,13 @@ C_DEPS += \
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Src/%.o: ../Src/%.c Src/subdir.mk
+Src/%.o Src/%.su: ../Src/%.c Src/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m0plus -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32L072xx -DDEBUG -c -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Inc -I../Drivers/CMSIS/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/STM32L0xx_HAL_Driver/Inc/Legacy -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@"  -mfloat-abi=soft -mthumb -o "$@"
 
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/StringCommandParser.d ./Src/StringCommandParser.o ./Src/eeprom.d ./Src/eeprom.o ./Src/freertos.d ./Src/freertos.o ./Src/indication_task.d ./Src/indication_task.o ./Src/led_control_task.d ./Src/led_control_task.o ./Src/main.d ./Src/main.o ./Src/management_task.d ./Src/management_task.o ./Src/modem.d ./Src/modem.o ./Src/monitor_task.d ./Src/monitor_task.o ./Src/stm32l0xx_hal_msp.d ./Src/stm32l0xx_hal_msp.o ./Src/stm32l0xx_hal_timebase_tim.d ./Src/stm32l0xx_hal_timebase_tim.o ./Src/stm32l0xx_it.d ./Src/stm32l0xx_it.o ./Src/syscalls.d ./Src/syscalls.o ./Src/sysmem.d ./Src/sysmem.o ./Src/system_stm32l0xx.d ./Src/system_stm32l0xx.o
+	-$(RM) ./Src/StringCommandParser.d ./Src/StringCommandParser.o ./Src/StringCommandParser.su ./Src/eeprom.d ./Src/eeprom.o ./Src/eeprom.su ./Src/freertos.d ./Src/freertos.o ./Src/freertos.su ./Src/indication_task.d ./Src/indication_task.o ./Src/indication_task.su ./Src/led_control_task.d ./Src/led_control_task.o ./Src/led_control_task.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/management_task.d ./Src/management_task.o ./Src/management_task.su ./Src/modem.d ./Src/modem.o ./Src/modem.su ./Src/monitor_task.d ./Src/monitor_task.o ./Src/monitor_task.su ./Src/stm32l0xx_hal_msp.d ./Src/stm32l0xx_hal_msp.o ./Src/stm32l0xx_hal_msp.su ./Src/stm32l0xx_hal_timebase_tim.d ./Src/stm32l0xx_hal_timebase_tim.o ./Src/stm32l0xx_hal_timebase_tim.su ./Src/stm32l0xx_it.d ./Src/stm32l0xx_it.o ./Src/stm32l0xx_it.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32l0xx.d ./Src/system_stm32l0xx.o ./Src/system_stm32l0xx.su
 
 .PHONY: clean-Src
 

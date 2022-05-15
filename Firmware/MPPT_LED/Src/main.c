@@ -130,7 +130,7 @@ int main(void)
 
   /*Read saved data from EEPROM*/
   eeprom_ram_init(&eeprom_info);
-  //eeprom_save(&eeprom_info);
+  eeprom_save(&eeprom_info);
 
   /*Feed the watchdog timer*/
   HAL_IWDG_Refresh(&hiwdg);

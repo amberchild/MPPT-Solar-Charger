@@ -30,7 +30,7 @@ void ManagementTask(void const * argument)
 		/*Check if it is a day time*/
 		if(storage.daytime_flag)
 		{
-			/*If input is more than MPPT, enable charger*/
+			/*If input is more than MPPT, enable the charger*/
 			if(storage.vinput_mv+100 > MPPT_MV)
 			{
 				charger_enable();
@@ -98,7 +98,7 @@ void ManagementTask(void const * argument)
 			}
 
 		}
-		/*It must be a night time*/
+		/*It must be a night time or PV module is disconnected*/
 		else
 		{
 			charger_disable();
@@ -134,6 +134,7 @@ void ManagementTask(void const * argument)
 
 				/*Discharge battery with LEDs*/
 				modem_data.day_lenght_store = storage.daylength_s;
+				storage.daylength_s = 0;
 				while(1)
 				{
 					osMessagePut(ind_msg, IND_RED, osWaitForever);
@@ -172,7 +173,6 @@ void ManagementTask(void const * argument)
 					}
 				}
 				battery_charged = 0;
-				storage.daylength_s = 0;
 				storage.energy_stored_mah = 0;
 				storage.energy_released_mah = 0;
 			}
