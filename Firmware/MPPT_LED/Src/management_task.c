@@ -107,13 +107,8 @@ void ManagementTask(void const * argument)
 
 			if(!discharge_lock)
 			{
-				/*DO NOT fully load the battery if daytime was too short */
-				if(storage.daylength_s < MIN_DAY_DUR)
-				{
-					storage.led_level = load_setup(eeprom_info.batt_full_mah/2, HOURS_24);
-				}
 				/*Load the battery with LEDs*/
-				else if(battery_charged)
+				if(battery_charged)
 				{
 					storage.led_level = load_setup(eeprom_info.batt_full_mah, HOURS_24 - storage.daylength_s);
 				}
@@ -128,6 +123,7 @@ void ManagementTask(void const * argument)
 					else
 					{
 						storage.energy_stored_mah = 0;
+						storage.led_level = 0;
 						osMessagePut(led_msg, 0, osWaitForever);
 					}
 				}
@@ -137,10 +133,20 @@ void ManagementTask(void const * argument)
 				storage.daylength_s = 0;
 				while(1)
 				{
-					osMessagePut(ind_msg, IND_RED, osWaitForever);
-					osDelay(500);
-					osMessagePut(ind_msg, IND_OFF, osWaitForever);
-					osDelay(500);
+					if(storage.led_level)
+					{
+						osMessagePut(ind_msg, IND_GREEN, osWaitForever);
+						osDelay(500);
+						osMessagePut(ind_msg, IND_OFF, osWaitForever);
+						osDelay(500);
+					}
+					else
+					{
+						osMessagePut(ind_msg, IND_RED, osWaitForever);
+						osDelay(50);
+						osMessagePut(ind_msg, IND_OFF, osWaitForever);
+						osDelay(950);
+					}
 
 					/*Day time?*/
 					if(storage.daytime_flag)
