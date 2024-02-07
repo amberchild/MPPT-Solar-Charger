@@ -1,0 +1,2 @@
+../Src/system_stm32l0xx.c:135:6:SystemInit	1
+../Src/system_stm32l0xx.c:204:6:SystemCoreClockUpdate	7

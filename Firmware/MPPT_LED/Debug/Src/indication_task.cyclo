@@ -1,0 +1,4 @@
+../Src/indication_task.c:56:6:ind_green	1
+../Src/indication_task.c:71:6:ind_red	1
+../Src/indication_task.c:86:6:ind_off	1
+../Src/indication_task.c:19:6:IndicationTask	5

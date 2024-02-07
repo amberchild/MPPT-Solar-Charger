@@ -1,0 +1,5 @@
+../Src/management_task.c:209:6:charger_enable	1
+../Src/management_task.c:213:6:charger_disable	1
+../Src/management_task.c:218:12:charger_status	9
+../Src/management_task.c:252:10:load_setup	3
+../Src/management_task.c:17:6:ManagementTask	20

@@ -1,4 +1,4 @@
-../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c:840:13:DMA_SetConfig	12	static
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c:840:13:DMA_SetConfig	16	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c:139:19:HAL_DMA_Init	16	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c:214:19:HAL_DMA_DeInit	16	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_dma.c:294:19:HAL_DMA_Start	16	static

@@ -1,0 +1,2 @@
+../Src/eeprom.c:16:19:writeEEPROMByte	1
+../Src/eeprom.c:25:19:writeEEPROMData	4

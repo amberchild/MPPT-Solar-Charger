@@ -19,7 +19,7 @@ void ManagementTask(void const * argument)
 	ch_state_t ch_status = UNKNOWN;
 	static _Bool battery_charged = 0;
 	static _Bool discharge_lock = 0;
-	static int32_t max_idle_current = 0;
+	//static int32_t max_idle_current = 0;
 	uint8_t i;
 	upload_error_t sts = UPLOAD_OK;
 
@@ -185,6 +185,7 @@ void ManagementTask(void const * argument)
 		}
 
 		/*Energy bleed check in idle state*/
+		/*
 		if(battery_charged)
 		{
 			if(storage.coutput_ma > max_idle_current)
@@ -201,6 +202,7 @@ void ManagementTask(void const * argument)
 				battery_charged = 0;
 			}
 		}
+		*/
 	}
 }
 
@@ -252,9 +254,6 @@ uint32_t load_setup(uint32_t capacity, uint32_t nightitme)
 	uint32_t intensity;
 	uint32_t mAseconds;
 	float capfix;
-
-	/*BMS decreases the capacity?*/
-	//capfix = (COEFF_K * capacity) - COEFF_B;
 
 	capfix = 0.70 * capacity;
 	capacity = (uint32_t)capfix;

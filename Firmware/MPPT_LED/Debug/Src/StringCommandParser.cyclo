@@ -1,0 +1,13 @@
+../Src/StringCommandParser.c:44:6:SCP_Tick	4
+../Src/StringCommandParser.c:53:6:SCP_UpCase	2
+../Src/StringCommandParser.c:59:6:SCP_Init	2
+../Src/StringCommandParser.c:74:10:SCP_AddCallback	3
+../Src/StringCommandParser.c:109:6:SCP_GetBuff	3
+../Src/StringCommandParser.c:133:14:SCP_CheckCommand	5
+../Src/StringCommandParser.c:89:6:SCP_Process	5
+../Src/StringCommandParser.c:178:9:SCP_SendCommandWaitAnswer	5
+../Src/StringCommandParser.c:201:9:SCP_SendDoubleCommandWaitAnswer	10
+../Src/StringCommandParser.c:247:7:SCP_InitRx	1
+../Src/StringCommandParser.c:25:6:SCP_ByteReceived	2
+../Src/StringCommandParser.c:253:7:SCP_SendData	1
+../Src/StringCommandParser.c:258:8:SCP_WaitForAnswer	3

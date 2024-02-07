@@ -8,6 +8,6 @@
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c:1294:10:HAL_RCC_GetPCLK1Freq	8	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c:1306:10:HAL_RCC_GetPCLK2Freq	8	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c:1319:6:HAL_RCC_GetOscConfig	0	static
-../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c:1422:6:HAL_RCC_GetClockConfig	12	static
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c:1422:6:HAL_RCC_GetClockConfig	8	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c:1470:13:HAL_RCC_CSSCallback	0	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_rcc.c:1453:6:HAL_RCC_NMI_IRQHandler	8	static

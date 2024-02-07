@@ -24,6 +24,6 @@
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c:2468:13:ADC_DMAError	8	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c:1692:6:HAL_ADC_IRQHandler	8	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c:1926:19:HAL_ADC_ConfigChannel	16	static
-../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c:2045:19:HAL_ADC_AnalogWDGConfig	12	static
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c:2045:19:HAL_ADC_AnalogWDGConfig	16	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c:2162:10:HAL_ADC_GetState	0	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_adc.c:2176:10:HAL_ADC_GetError	0	static

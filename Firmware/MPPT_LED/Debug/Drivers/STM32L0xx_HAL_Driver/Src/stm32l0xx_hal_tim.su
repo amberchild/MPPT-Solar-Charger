@@ -3,7 +3,7 @@
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c:6534:13:TIM_OC2_SetConfig	12	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c:6582:13:TIM_OC3_SetConfig	12	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c:6629:13:TIM_OC4_SetConfig	12	static
-../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c:6811:13:TIM_TI1_SetConfig	20	static
+../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c:6811:13:TIM_TI1_SetConfig	16	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c:6858:13:TIM_TI1_ConfigInputStage	12	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c:6901:13:TIM_TI2_SetConfig	16	static
 ../Drivers/STM32L0xx_HAL_Driver/Src/stm32l0xx_hal_tim.c:6941:13:TIM_TI2_ConfigInputStage	12	static
